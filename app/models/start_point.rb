@@ -17,7 +17,7 @@ class StartPoint < ApplicationRecord
   validates :long, presence: true
   validates :lat, presence: true
 
-  geocoded_by :station
+  geocoded_by :station, latitude: :lat, longitude: :long
   after_validation :geocode, if: :station_changed?
 end
 
