@@ -17,4 +17,6 @@ class EndPoint < ApplicationRecord
   validates :long, presence: true
   validates :lat, presence: true
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
 end
