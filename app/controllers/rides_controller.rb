@@ -10,6 +10,14 @@ class RidesController < ApplicationController
   end
 
   def show
+
+    points = [@ride.start_point, @ride.end_point]
+
+    @markers = Gmaps4rails.build_markers(points) do |point, marker|
+      marker.lat point.lat
+      marker.lng point.long
+      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    end
   end
 
   def new
