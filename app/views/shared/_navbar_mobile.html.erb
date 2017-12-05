@@ -1,0 +1,31 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "logo_cropped.png", height: 50 %>
+  <% end %>
+
+
+  <% if user_signed_in? %>
+    <!-- Appears when logged in -->
+    <!-- Appearing on mobile only -->
+    <div class="navbar-wagon-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <%= link_to edit_user_registration_path, class: "avatar" do %>
+          <% if current_user.photo? %>
+            <%= cl_image_tag current_user.photo.path, width: 50, height: 50, crop: :fill %>
+            <% else %>
+            <%= cl_image_tag 'default_avatar_pic.png', width: 50, height: 50, crop: :fill %>
+          <% end %>
+
+        <% end %>
+
+      </div>
+    </div>
+
+  <% else %>
+    <!-- Login link (when logged out) -->
+    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <% end %>
+
+</div>
+

@@ -36,4 +36,6 @@ class User < ApplicationRecord
   validates :sex, presence: true, inclusion: { in: ["femme", "homme"], message: "male or female"}
   validates :birth_date, presence:true
 
+  has_attachment :photo
+
 end
