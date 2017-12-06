@@ -16,12 +16,20 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem 'geocoder'
+gem 'coffee-rails'
+gem 'gmaps4rails'
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
+
 gem 'cloudinary', '1.1.7'
 gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
-gem 'coffee-rails'
 gem 'devise-i18n', '~> 1.2'
 gem 'rails-i18n', '5.0.3'
+
 
 group :development, :test do
   gem 'pry-byebug'
