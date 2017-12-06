@@ -1,50 +1,56 @@
 
 
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1"></label>
-        <input type="email" class="form-control soft-angle" id="exampleInputEmail1" placeholder="Gare d'arrivée">
-      </div>
-      <div class="form-group ">
-        <label for="exampleInputPassword1"></label>
-        <input type="password" class="form-control soft-angle" id="exampleInputPassword1" placeholder="Jour d'arrivée">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1"></label>
-        <input type="password" class="form-control soft-angle" id="exampleInputPassword1" placeholder="Heure d'arrivée">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1"></label>
-        <input type="password" class="form-control soft-angle" id="exampleInputPassword1" placeholder="Numéros de train ( fac)">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1"></label>
-        <input type="password" class="form-control soft-angle" id="exampleInputPassword1" placeholder="Saisissez une destination">
-      </div>
-
-      <div class="form-group row ">
-          <div class="col-xs-8">
-
-              <label type="password" class="form-control truncate soft-angle
-    "  id="exampleInputPassword1" >
-            n° de passagers
-              </label>
-          </div>
-          <div class="col-xs-4 ">
-            <select class="form-control soft-angle
-  ">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-            </select>
-          </div>
-      </div>
+    <div class="container">
+      <form action="<%= rides_path %>" method= "get">
+        <div class="form-group">
+          <label for="station"></label>
+          <input type="text" name="search[start_point]"  class="form-control soft-angle" id="station" placeholder="Gare d'arrivée">
+        </div>
 
 
-      <button type="submit" class="btn btn-default col-xs-4 soft-angl">Submit</button>
-    </form>
+
+        <div class="form-group ">
+          <label for="day"></label>
+          <input type="text" name ="search[train_arrival_date]" class="form-control soft-angle" id="day" placeholder="Jour d'arrivée">
+        </div>
+        <div class="form-group">
+          <label for="hour"></label>
+          <input type="text" name="search[train_arrival_time]" class="form-control soft-angle" id="hour" placeholder="Heure d'arrivée">
+        </div>
+        <div class="form-group">
+          <label for="train-num"></label>
+          <input type="text" name="search[train_ref]" class="form-control soft-angle" id="train-num" placeholder="Numéros de train ( fac)">
+        </div>
+        <div class="form-group">
+          <label for="dest"></label>
+          <input type="text" name="search[end_point]" class="form-control soft-angle" id="dest" placeholder="Saisissez une destination">
+        </div>
+
+        <div class="form-group row ">
+            <div class="col-xs-8">
+
+                <label type="text" class="form-control truncate soft-angle
+      "  id="exampleInputPassword1" >
+              n° de passagers
+                </label>
+            </div>
+            <div class="col-xs-4 ">
+              <select class="form-control soft-angle
+        " type="text" name="search[passenger_number]">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+              </select>
+            </div>
+        </div>
+
+
+        <input type="submit" name="submit-button" value =" Submit" class="btn btn-default col-xs-4 soft-angle" href="">
+
+      </form>
+    </div>
 
 
