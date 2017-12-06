@@ -1,0 +1,7 @@
+
+<h2>Trajets disponibles</h2>
+<%@rides.each do |ride|  %>
+<%= ride.description %>
+<%= link_to 'click here', ride_path(ride) %>
+<% end %>
+
