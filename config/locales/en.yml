@@ -31,7 +31,7 @@
 
 en:
   hello: "Hello World"
-  # devise:
-  #   registrations:
-  #     edit:
-  #       update: "Update"
+  devise:
+    registrations:
+      edit:
+        title: "Edit my profile"
