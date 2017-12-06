@@ -255,8 +255,8 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.1.4)
-  rails-i18n (= 5.0.3)
   rails-assets-underscore!
+  rails-i18n (= 5.0.3)
   redis
   sass-rails
   simple_form
