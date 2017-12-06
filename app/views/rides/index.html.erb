@@ -1,7 +1,31 @@
+<div class="container">
+  <div class = "row ">
+    <div class= "col-xs-12 text-center">
+      <h3 >Trajets disponibles</h3>
+    </div>
+  </div>
+</div>
 
-<h2>Trajets disponibles</h2>
-<%@rides.each do |ride|  %>
-<%= ride.description %>
-<%= link_to 'click here', ride_path(ride) %>
-<% end %>
+<div class="rides-wrapper">
+  <div class="container">
+    <div class="row">
+      <h3>Dans votre train ! </h3>
+      <p> Arrivant Gare-Saint-Charles à 18h30</p>
 
+      <p><%= @station %></p>
+    </div>
+      <div class="row">
+
+      </div>
+  </div>
+</div>
+
+
+
+
+<% @rides.each do |ride| %>
+       <% if @station == ride.start_point.station  %>
+       <% ride.where  %>
+        <%= ride.train_ref %>
+         <%= ride.start_point.station %>
+  <%end%>
