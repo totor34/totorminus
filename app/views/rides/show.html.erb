@@ -1,6 +1,17 @@
-<%= @ride.description %>
 
-<div id="map" style="width: 100%; height: 600px;"></div>
+<% if @ride.user.photo? %>
+          <%= cl_image_tag current_user.photo.path, width: 50, height: 50, crop: :fill,class: 'image_circle', "data-toggle" => "dropdown" %>
+        <% else %>
+          <%= image_tag 'default_avatar_pic.png', width: 50, height: 50, crop: :fill, class: 'image_circle', "data-toggle" => "dropdown" %>
+        <% end %>
+
+<p><%= @ride.user.first_name %></p>
+
+<div> <strong> Arrivant à :</strong> <%= @ride.start_point.station %> </div>
+<div> <strong> Propose un trajet pour :</strong> <%= @ride.end_point.address %> </div>
+
+
+<div id="map" style="width: 100%; height: 300px;"></div>
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
@@ -44,3 +55,7 @@ handler.buildMap({ internal: {id: 'map'}}, function(){
 
   <% end %>
 <% end %>
+
+<p> <strong>Plus d'informations sur le trajet :</strong>
+
+  <%= @ride.description %> </p>
