@@ -27,13 +27,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
   has_many :rides
   has_many :bookings
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :sex, presence: true, inclusion: { in: ["femme", "homme"], message: "male or female"}
+  validates :sex, presence: true, inclusion: { in: ["femme", "homme"] , message: "male or female"}
   validates :birth_date, presence:true
 
   has_attachment :photo
