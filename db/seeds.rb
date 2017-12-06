@@ -22,7 +22,8 @@ user_1 = User.create!(
   email:"testm@test.fr",
   sex:"homme",
   birth_date: Date.parse("01/01/1981"),
-  phone_number:"0111111111"
+  phone_number:"0111111111",
+  photo_url: "http://kitt.lewagon.com/placeholder/users/mathisclm"
   )
 
 user_2 = User.create!(
