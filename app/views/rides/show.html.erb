@@ -4,7 +4,7 @@
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
-    var handler = Gmaps.build('Google');
+  /* var handler = Gmaps.build('Google');
     handler.buildMap({ internal: { id: 'map' } }, function() {
       markers = handler.addMarkers(<%= raw @markers.to_json %>);
       handler.bounds.extendWith(markers);
@@ -15,5 +15,32 @@
         handler.getMap().setZoom(14);
       }
     });
+    */
+
+var directionsDisplay = new google.maps.DirectionsRenderer();
+var directionsService = new google.maps.DirectionsService();
+
+function calcRoute() {
+  var origin      = new google.maps.LatLng(<%= @markers.first[:lat] %>, <%= @markers.first[:lng] %>);
+  var destination = new google.maps.LatLng(<%= @markers.last[:lat] %>, <%= @markers.last[:lng] %>);
+  var request = {
+      origin:      origin,
+      destination: destination,
+      travelMode:  google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
+
+calcRoute();
+
+var handler = Gmaps.build('Google');
+handler.buildMap({ internal: {id: 'map'}}, function(){
+  directionsDisplay.setMap(handler.getMap());
+});
+
   <% end %>
 <% end %>
