@@ -30,3 +30,4 @@ class Ride < ApplicationRecord
   validates :description, presence: true
 
 end
+
