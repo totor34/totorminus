@@ -6,14 +6,33 @@
 }
 
 
-.background-blue {
-// background-color: #B8DBD9;
-height: 100vh;
-background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-// background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-}
-
 .soft-angle {
   border-radius: 8px;
   box-shadow: 1px 1px 0px 0px rgba(0, 0, 255, .2);
+}
+
+
+.rides-wrapper {
+background-color: lightgrey;
+width: 100%;
+}
+
+body {
+  background: linear-gradient(234deg, white 20%, #b8dbd9);
+  height: 100%;
+}
+html {
+  min-height: 100vh;
+}
+
+.traject-card {
+  border-radius: 8px;
+  box-shadow: 1px 1px 0px 0px rgba(0, 0, 255, .2);
+  align-items: center;
+  justify-content: space-between;
+  border : 1px solid black;
+}
+
+.image_circle {
+  border-radius: 50%;
 }
