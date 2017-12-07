@@ -76,7 +76,12 @@
 
     <%= @ride.description %> </p>
 
-    <%= link_to "Réserver pour ce trajet", ride_bookings_path[:ride_id], method: :post %>
 </div>
 
+
+  <%= simple_form_for [@ride, @booking] , wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+        <%# f.error_notification %>
+    <%= f.input :passenger_number, placeholder: "Nbre de passagers", input_html: {value: params[:search][:passenger_number]} %>
+    <%= f.button :submit, "Réserver ce trajet", class: 'soft-angle' %>
+  <% end %>
 
