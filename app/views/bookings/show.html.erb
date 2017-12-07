@@ -1,6 +1,6 @@
 <div class="container container-content">
   <div class="row">
-    <div class="col-xs-10 col-xs-1-offset">
+    <div class="col-xs-10 col-xs-offset-1">
       <div class="text-center">
         <h1>Réservation confirmée!</h1>
         <p>Départ: <%= @booking.start_point.station %></p>
@@ -14,7 +14,7 @@
   </div>
   <hr>
   <div class="row">
-    <div class="col-xs-10 col-xs-1-offset">
+    <div class="col-xs-10 col-xs-offset-1">
       <div class="text-center bg-white soft-angle p- text-14">
         <%= @booking.ride.description %>
       </div>
@@ -22,10 +22,14 @@
   </div>
   <hr>
   <div class="row">
-    <div class="col-xs-10 col-xs-1-offset">
-      <div class="car-with-passengers">
+    <div class="col-xs-10 col-xs-offset-4">
+      <div class="car-with-passengers text-center">
         <div class="car-passenger">
-          <%= cl_image_tag current_user.photo.path, height: 40, width: 40, class:'image-circle'  %>
+          <% if current_user.photo? %>
+            <%= cl_image_tag current_user.photo.path, height: 40, width: 40, class: 'image-circle' %>
+            <% else %>
+            <%= image_tag 'default_avatar_pic.svg', height: 40, width: 40, class: 'image-circle' %>
+            <% end %>
         </div>
         <div class="car-driver">
           <%= cl_image_tag @booking.ride.user.photo.path, height: 40, width: 40, class:'image-circle'  %>
