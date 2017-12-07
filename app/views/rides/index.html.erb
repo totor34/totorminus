@@ -12,12 +12,13 @@
       <h3>Dans votre train ! </h3>
       <p> Arrivant Gare-Saint-Charles à 18h30</p>
       <p><%= @station %></p>
-    </div>
+
 
     <%@rides.each do |ride| %>
-
+   <p> <%= ride.user.first_name %> est dans votre train ! </p>
+   <p>il va  <%= ride.end_point.address %> en <%= ride.car_model %></p>
     <%= link_to "go ", ride_path(ride) %>
-
+  </div>
     <% end %>
 
   </div>

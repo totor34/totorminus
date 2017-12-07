@@ -61,6 +61,8 @@ end_point_1 = EndPoint.create!(
   lat: 43.304063
   )
 
+
+
 puts "#{EndPoint.count} end points created"
 
 
@@ -72,6 +74,13 @@ start_point_1 = StartPoint.create!(
   long: 5.380316,
   lat: 43.302852
   )
+
+start_point_2 = StartPoint.create!(
+  station: "Lille",
+  long: 5.380316,
+  lat: 43.302852
+  )
+
 
 puts "#{StartPoint.count} start points created"
 
@@ -87,12 +96,32 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
+    car_model: "Mazerati"
+  },
+
+ {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: Time.parse("22h57").strftime("%H:%M"),
+    user: user_2,
+    passengers_allowed: 3,
+    start_point: start_point_1,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "2 Cheveaux"
+   },
+
+ {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: Time.parse("22h57").strftime("%H:%M"),
+    user: user_1,
+    passengers_allowed: 3,
+    start_point: start_point_2,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
     car_model: "206"
-  }
-# ,
-# {
-#
-#   },
+   },
   ]
 
 rides = Ride.create!(rides)
