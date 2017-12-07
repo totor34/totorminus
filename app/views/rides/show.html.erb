@@ -4,7 +4,7 @@
   <div class= "row">
     <div class="col-xs-6">
     <% if @ride.user.photo? %>
-      <%= cl_image_tag current_user.photo.path, width: 50, height: 50, crop: :fill,class: 'image-circle', "data-toggle" => "dropdown" %>
+      <%= cl_image_tag @rides_user.photo.path, width: 50, height: 50, crop: :fill,class: 'image-circle', "data-toggle" => "dropdown" %>
       <% else %>
       <%= image_tag 'default_avatar_pic.png', width: 50, height: 50, crop: :fill, class: 'image-circle', "data-toggle" => "dropdown" %>
       <% end %>
