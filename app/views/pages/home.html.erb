@@ -4,39 +4,75 @@
       <form action="<%= rides_path %>" method= "get">
         <div class="form-group">
           <label for="station"></label>
-          <input type="text" name="search[start_point]"  class="form-control soft-angle" id="station" placeholder="Gare d'arrivée">
+          <input type="text" name="search[start_point]"  class="form-control soft-angle" id="station" placeholder="Gare d'arrivée" required>
         </div>
-
-
 
         <div class="form-group ">
           <label for="day"></label>
-          <input type="text" name ="search[train_arrival_date]" class="form-control soft-angle" id="day" placeholder="Jour d'arrivée">
+          <input type="date" name ="search[train_arrival_date]" class="form-control soft-angle" id="day" placeholder="Jour d'arrivée" required>
         </div>
-        <div class="form-group">
-          <label for="hour"></label>
-          <input type="text" name="search[train_arrival_time]" class="form-control soft-angle" id="hour" placeholder="Heure d'arrivée">
+
+
+        <div class="form-group row">
+            <div class="col-xs-8">
+              <label type="text" class="form-control truncate soft-angle"  id="exampleInputPassword1" > Heure d'arrivée </label>
+            </div>
+            <div class="col-xs-4 ">
+              <select class="form-control soft-angle" type="text" name="search[train_arrival_time]">
+                <option>1h</option>
+                <option>2h</option>
+                <option>3h</option>
+                <option>4h</option>
+                <option>5h</option>
+                <option>6h</option>
+                <option>7h</option>
+                <option>8h</option>
+                <option>9h</option>
+                <option>10h</option>
+                <option>11h</option>
+                <option>12h</option>
+                <option>13h</option>
+                <option>14h</option>
+                <option>15h</option>
+                <option>16h</option>
+                <option>17h</option>
+                <option>18h</option>
+                <option>10h</option>
+                <option>11h</option>
+                <option>12h</option>
+                <option>13h</option>
+                <option>14h</option>
+                <option>15h</option>
+                <option>16h</option>
+                <option>17h</option>
+                <option>18h</option>
+                <option>19h</option>
+                <option>20h</option>
+                <option>21h</option>
+                <option>22h</option>
+                <option>23h</option>
+                <option>00h</option>
+              </select>
+            </div>
         </div>
         <div class="form-group">
           <label for="train-num"></label>
-          <input type="text" name="search[train_ref]" class="form-control soft-angle" id="train-num" placeholder="Numéros de train ( fac)">
+          <input type="text" name="search[train_ref]" class="form-control soft-angle" id="train-num" placeholder="Numéros de train">
         </div>
         <div class="form-group">
           <label for="dest"></label>
-          <input type="text" name="search[end_point]" class="form-control soft-angle" id="dest" placeholder="Saisissez une destination">
+          <input type="text" name="search[end_point]" class="form-control soft-angle" id="dest" placeholder="Saisissez une destination" required>
         </div>
-
         <div class="form-group row ">
             <div class="col-xs-8">
-
                 <label type="text" class="form-control truncate soft-angle
       "  id="exampleInputPassword1" >
-              n° de passagers
+              Nombre de passagers
                 </label>
             </div>
             <div class="col-xs-4 ">
               <select class="form-control soft-angle
-        " type="text" name="search[passenger_number]">
+        " type="text" name="search[passenger_number]" required>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
