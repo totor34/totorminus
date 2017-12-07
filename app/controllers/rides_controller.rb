@@ -7,7 +7,7 @@ class RidesController < ApplicationController
   def index
     @rides = Ride.all
     search_params = params[:search]
-    raise
+
 
 
 
