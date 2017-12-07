@@ -6,16 +6,19 @@ class RidesController < ApplicationController
 
   def index
     @rides = Ride.all
-    search_params = params[:search]
-
-
-
+    @search_params = params[:search]
+    # @matching_rides = Ride.select do |ride|
+    # ride.start_point.station == @search_params.start_point
+    # # || ride.train_arrival_date == search[train_arrival_date]
+    # # || ride.train_arrival_time >= search[train_arrival_time]
+    # end
 
 
         # On filtre les rides dont :
         # le start point et la gare d'arrivée matchent
         # le jour du ride match avec le jour cherché.
         # l'heure du ride est postérieur ou égale à l'heure cherché
+        # le passenger allowed est superieur ou egal au passager number dans search
 
             # if no matching return : désolé il n'y a pas de trajet au départ
             # de votre gare
