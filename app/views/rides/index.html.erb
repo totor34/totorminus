@@ -16,7 +16,7 @@
 
     <%@rides.each do |ride| %>
 
-    <%= link_to "go ", ride_path(ride) %>
+    <%= link_to "go ", ride_path(ride, request.query_parameters) %>
 
     <% end %>
 

@@ -1,3 +1,25 @@
-#car-with-passengers {
+.car-with-passengers {
+  position: relative;
+  height: 200px;
+  width: 200px;
 
 }
+
+.card-car {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+}
+.car-passenger {
+  position: absolute;
+  top: 34px;
+  left: 55px;
+}
+.car-driver {
+  position: absolute;
+  top: 34px;
+  right: 55px;
+}
+
+
