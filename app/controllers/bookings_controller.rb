@@ -1,7 +1,4 @@
 class BookingsController < ApplicationController
-  def new
-    @booking = Booking.new
-  end
 
   def create
     @ride = Ride.find(params[:ride_id])
@@ -22,7 +19,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:ride_id, :user_id, :passenger_number)
+    params.require(:booking).permit(:passenger_number)
   end
 
 end
