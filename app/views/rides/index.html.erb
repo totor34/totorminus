@@ -10,13 +10,9 @@
   <div class="container">
     <div class="row">
       <h3>Dans votre train ! </h3>
-      <p> Arrivant Gare-Saint-Charles à 18h30</p>
-      <p><%= @station %></p>
-
-
-
-    <%@rides.each do |ride| %>
-   <p> <%= ride.user.first_name %> est dans votre train ! </p>
+    <%@matching_rides.each do |ride| %>
+    <h3><%= ride.train_arrival_date %></h3>
+   <p> <%= ride.user.first_name %> arrive à <%= ride.start_point.station %> à <%= ride.train_arrival_time.strftime("%Hh%M") %> </p>
    <p>il va  <%= ride.end_point.address %> en <%= ride.car_model %></p>
   </div>
 

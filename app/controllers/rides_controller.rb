@@ -7,11 +7,9 @@ class RidesController < ApplicationController
   def index
     @rides = Ride.all
     @search_params = params[:search]
-    # @matching_rides = Ride.select do |ride|
-    # ride.start_point.station == @search_params.start_point
-    # # || ride.train_arrival_date == search[train_arrival_date]
-    # # || ride.train_arrival_time >= search[train_arrival_time]
-    # end
+    @matching_rides = @rides.select do |ride|
+      ride.start_point.station == @search_params[:start_point] && ride.train_arrival_date == @search_params[:train_arrival_date].to_date && ride.train_arrival_time.strftime("%Hh%M") >= @search_params[:train_arrival_time]
+    end
 
 
         # On filtre les rides dont :
@@ -28,10 +26,6 @@ class RidesController < ApplicationController
               # du formulaire
               # return ces rides en fonction par distance croissante
               # entre (destination final form et destination final ride)
-
-
-
-
 
 
   end

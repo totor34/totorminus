@@ -2,10 +2,23 @@
 
     <div class="container">
       <form action="<%= rides_path %>" method= "get">
-        <div class="form-group">
+
+        <div class="form-group row mt+ ">
+            <div class="col-xs-8">
+              <label type="text" class="form-control truncate soft-angle"  id="exampleInputPassword1" > Gare d'arrivée </label>
+            </div>
+            <div class="col-xs-4 ">
+              <select class="form-control soft-angle" type="text" name="search[start_point]">
+                <option>Marseille Saint-Charles</option>
+                <option>Gare de Lille Flandre</option>
+                <option>Avigon TGV</option>
+              </select>
+            </div>
+        </div>
+        <!-- <div class="form-group">
           <label for="station"></label>
           <input type="text" name="search[start_point]"  class="form-control soft-angle" id="station" placeholder="Gare d'arrivée" required>
-        </div>
+        </div> -->
 
         <div class="form-group ">
           <label for="day"></label>
