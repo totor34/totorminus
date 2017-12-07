@@ -11,6 +11,7 @@ class RidesController < ApplicationController
 
 
 
+
         # On filtre les rides dont :
         # le start point est la gare d'arrivée matchent
         # le jour du ride match avec le jour cherché.
