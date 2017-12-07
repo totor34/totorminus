@@ -1,3 +1,11 @@
+body {
+  background: linear-gradient(234deg, white 20%, #b8dbd9);
+  height: 100%;
+}
+
+html {
+  min-height: 100vh;
+}
 
 .truncate {
   white-space: nowrap;
@@ -5,24 +13,14 @@
   text-overflow: ellipsis;
 }
 
-
 .soft-angle {
   border-radius: 8px;
   box-shadow: 1px 1px 0px 0px rgba(0, 0, 255, .2);
 }
 
-
 .rides-wrapper {
-background-color: lightgrey;
-width: 100%;
-}
-
-body {
-  background: linear-gradient(234deg, white 20%, #b8dbd9);
-  height: 100%;
-}
-html {
-  min-height: 100vh;
+  background-color: lightgrey;
+  width: 100%;
 }
 
 .traject-card {
@@ -33,6 +31,84 @@ html {
   border : 1px solid black;
 }
 
-.image_circle {
+.image-circle {
   border-radius: 50%;
 }
+
+.container-content {
+  padding: 20px;
+}
+
+.container-content h1 {
+  font-size: 36px;
+}
+
+.container-content p {
+  font-size: 14px;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.bg-white {
+  background-color: white;
+}
+// spacing helpers
+
+.m0{margin: 0px !important;}
+.mt0{margin-top: 0px !important;}
+.mb0{margin-bottom: 0px !important;}
+.ml0{margin-left: 0px !important;}
+.mr0{margin-right: 0px !important;}
+
+.p0{padding: 0px !important;}
+.pt0{padding-top: 0px !important;}
+.pb0{padding-bottom: 0px !important;}
+.pl0{padding-left: 0px !important;}
+.pr0{padding-right: 0px !important;}
+
+.ml\-\-\-{margin-left: -5px !important;}
+
+.m\-\-{margin: 5px !important;}
+.mt\-\-{margin-top: 5px !important;}
+.mb\-\-{margin-bottom: 5px !important;}
+.ml\-\-{margin-left: 5px !important;}
+.mr\-\-{margin-right: 5px !important;}
+
+.m\-{margin: 10px !important;}
+.mt\-{margin-top: 10px !important;}
+.mb\-{margin-bottom: 10px !important;}
+.ml\-{margin-left: 10px !important;}
+.mr\-{margin-right: 10px !important;}
+
+.p\-{padding: 10px !important;}
+.pt\-{padding-top: 10px !important;}
+.pb\-{padding-bottom: 10px !important;}
+.pl\-{padding-left: 10px !important;}
+.pr\-{padding-right: 10px !important;}
+
+.m{margin: 20px !important;}
+.mt{margin-top: 20px !important;}
+.mb{margin-bottom: 20px !important;}
+.ml{margin-left: 20px !important;}
+.mr{margin-right: 20px !important;}
+
+.p{padding: 20px !important;}
+.pt{padding-top: 20px !important;}
+.pb{padding-bottom: 20px !important;}
+.pl{padding-left: 20px !important;}
+.pr{padding-right: 20px !important;}
+
+.m\+{margin: 40px !important;}
+.mt\+{margin-top: 40px !important;}
+.mb\+{margin-bottom: 40px !important;}
+.mb\+\+{margin-bottom: 80px !important;}
+.ml\+{margin-left: 40px !important;}
+.mr\+{margin-right: 40px !important;}
+
+.p\+{padding: 40px !important;}
+.pt\+{padding-top: 40px !important;}
+.pb\+{padding-bottom: 40px !important;}
+.pl\+{padding-left: 40px !important;}
+.pr\+{padding-right: 40px !important;}
