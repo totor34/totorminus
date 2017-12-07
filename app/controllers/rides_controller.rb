@@ -7,13 +7,13 @@ class RidesController < ApplicationController
   def index
     @rides = Ride.all
     search_params = params[:search]
-    raise
+    @matching_rides
 
 
 
 
         # On filtre les rides dont :
-        # le start point est la gare d'arrivée matchent
+        # le start point et la gare d'arrivée matchent
         # le jour du ride match avec le jour cherché.
         # l'heure du ride est postérieur ou égale à l'heure cherché
 

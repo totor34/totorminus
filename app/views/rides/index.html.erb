@@ -11,21 +11,16 @@
     <div class="row">
       <h3>Dans votre train ! </h3>
       <p> Arrivant Gare-Saint-Charles à 18h30</p>
-
       <p><%= @station %></p>
     </div>
-      <div class="row">
 
-      </div>
+    <%@rides.each do |ride| %>
+
+    <%= link_to "go ", ride_path(ride) %>
+
+    <% end %>
+
   </div>
 </div>
 
 
-
-
-<% @rides.each do |ride| %>
-       <% if @station == ride.start_point.station  %>
-       <% ride.where  %>
-        <%= ride.train_ref %>
-         <%= ride.start_point.station %>
-  <%end%>
