@@ -14,11 +14,15 @@
       <p><%= @station %></p>
 
 
+
     <%@rides.each do |ride| %>
    <p> <%= ride.user.first_name %> est dans votre train ! </p>
    <p>il va  <%= ride.end_point.address %> en <%= ride.car_model %></p>
-    <%= link_to "go ", ride_path(ride) %>
   </div>
+
+    <%= link_to "go ", ride_path(ride, request.query_parameters) %>
+
+
     <% end %>
 
   </div>

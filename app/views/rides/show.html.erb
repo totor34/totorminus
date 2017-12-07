@@ -4,7 +4,7 @@
   <div class= "row">
     <div class="col-xs-6">
     <% if @ride.user.photo? %>
-      <%= cl_image_tag current_user.photo.path, width: 50, height: 50, crop: :fill,class: 'image-circle', "data-toggle" => "dropdown" %>
+      <%= cl_image_tag @ride.user.photo.path, width: 50, height: 50, crop: :fill,class: 'image-circle', "data-toggle" => "dropdown" %>
       <% else %>
       <%= image_tag 'default_avatar_pic.png', width: 50, height: 50, crop: :fill, class: 'image-circle', "data-toggle" => "dropdown" %>
       <% end %>
@@ -76,3 +76,10 @@
 
     <%= @ride.description %> </p>
 </div>
+
+  <%= simple_form_for [@ride, @booking] , wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+        <%# f.error_notification %>
+    <%= f.input :passenger_number, placeholder: "Nbre de passagers", input_html: {value: params[:search][:passenger_number]} %>
+    <%= f.button :submit, "Réserver ce trajet", class: 'soft-angle' %>
+  <% end %>
+

@@ -23,7 +23,16 @@
   <hr>
   <div class="row">
     <div class="col-xs-10 col-xs-1-offset">
-    <%= cl_image_tag current_user.photo.path, height: 50, width: 50, class:'image-circle'  %>
-    <%= image_tag 'car.svg', height: 200, width: 200 %>
+      <div class="car-with-passengers">
+        <div class="car-passenger">
+          <%= cl_image_tag current_user.photo.path, height: 40, width: 40, class:'image-circle'  %>
+        </div>
+        <div class="car-driver">
+          <%= cl_image_tag @booking.ride.user.photo.path, height: 40, width: 40, class:'image-circle'  %>
+        </div>
+        <div class="car">
+          <%= image_tag 'car.svg', height: 200, width: 200 %>
+        </div>
+      </div>
     </div>
 </div>

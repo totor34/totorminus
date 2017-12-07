@@ -13,6 +13,7 @@ class RidesController < ApplicationController
     # # || ride.train_arrival_time >= search[train_arrival_time]
     # end
 
+
         # On filtre les rides dont :
         # le start point et la gare d'arrivée matchent
         # le jour du ride match avec le jour cherché.
@@ -43,6 +44,7 @@ class RidesController < ApplicationController
       marker.lat point.lat
       marker.lng point.long
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    @booking = Booking.new
     end
   end
 
