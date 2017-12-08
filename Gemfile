@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'geocoder'
 gem 'coffee-rails'
 gem 'gmaps4rails'
+gem 'pg_search'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
@@ -39,5 +40,4 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'annotate'
-  gem 'nokogiri'
 end
