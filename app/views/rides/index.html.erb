@@ -6,21 +6,23 @@
   </div>
 </div>
 
-<div class="rides-wrapper">
-  <div class="container">
-    <div class="row">
-      <h3>Dans votre train ! </h3>
-    <%@matching_rides.each do |ride| %>
-    <h3><%= ride.train_arrival_date %></h3>
-   <p> <%= ride.user.first_name %> arrive à <%= ride.start_point.station %> à <%= ride.train_arrival_time.strftime("%Hh%M") %> </p>
-   <p>il va  <%= ride.end_point.address %> en <%= ride.car_model %></p>
-  </div>
 
-    <%= link_to "go ", ride_path(ride, request.query_parameters) %>
-
-
-    <% end %>
-
-  </div>
-</div>
-
+<% @matching_rides.each do |r| %>
+  <% if r.train_ref == @matching_train %>
+    <div class="rides-wrapper">
+      <div class="container">
+        <div class="row">
+          <h3>Dans votre train !  </h3>
+            <%= render 'shared/rides_card_content', ride: r %>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div class="container">
+        <div class="row">
+          <h3>Autres trains </h3>
+            <%= render 'shared/rides_card_content', ride: r %>
+        </div>
+    </div>
+  <% end %>
+<% end %>

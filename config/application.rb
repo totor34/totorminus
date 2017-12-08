@@ -33,5 +33,6 @@ module Totorminus
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.i18n.default_local = :fr
   end
 end

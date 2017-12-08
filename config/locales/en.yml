@@ -30,6 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  time:
+    formats:
+      time_only: "%H:%M"
+
   hello: "Hello World"
   devise:
     registrations:
