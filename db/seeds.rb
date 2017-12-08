@@ -46,6 +46,16 @@ user_3 = User.create!(
   phone_number:"0333333333"
   )
 
+user_4 = User.create!(
+  first_name:"Jean Jacques",
+  last_name:"Dutronc",
+  password:"password",
+  email:"testj@test.fr",
+  sex:"femme",
+  birth_date: Date.parse("03/03/1953"),
+  phone_number:"0444444"
+  )
+
 puts "#{User.count} users created"
 
 # def seed_photo(file_name)
@@ -76,11 +86,16 @@ start_point_1 = StartPoint.create!(
   )
 
 start_point_2 = StartPoint.create!(
-  station: "Lille",
+  station: "Gare de Lille Flandre",
   long: 5.380316,
   lat: 43.302852
   )
 
+start_point_3 = StartPoint.create!(
+  station: "Avigon TGV",
+  long: 5.380316,
+  lat: 43.302852
+  )
 
 puts "#{StartPoint.count} start points created"
 
@@ -99,10 +114,22 @@ rides = [
     car_model: "Mazerati"
   },
 
- {
+    {
     train_ref: "6129",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("22h57").strftime("%H:%M"),
+    train_arrival_time: Time.parse("16h00").strftime("%H:%M"),
+    user: user_1,
+    passengers_allowed: 3,
+    start_point: start_point_1,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+ {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("18/12/2017"),
+    train_arrival_time: Time.parse("13h00").strftime("%H:%M"),
     user: user_2,
     passengers_allowed: 3,
     start_point: start_point_1,
@@ -114,7 +141,7 @@ rides = [
  {
     train_ref: "6129",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("22h57").strftime("%H:%M"),
+    train_arrival_time: Time.parse("07h00").strftime("%H:%M"),
     user: user_1,
     passengers_allowed: 3,
     start_point: start_point_2,
@@ -122,6 +149,44 @@ rides = [
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206"
    },
+
+   {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: Time.parse("18h30").strftime("%H:%M"),
+    user: user_1,
+    passengers_allowed: 3,
+    start_point: start_point_3,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+
+    {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: Time.parse("10h00").strftime("%H:%M"),
+    user: user_1,
+    passengers_allowed: 3,
+    start_point: start_point_3,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+    {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: Time.parse("09h00").strftime("%H:%M"),
+    user: user_1,
+    passengers_allowed: 3,
+    start_point: start_point_3,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
   ]
 
 rides = Ride.create!(rides)
