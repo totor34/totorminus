@@ -6,11 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'csv'
+
 Booking.destroy_all
 Ride.destroy_all
 EndPoint.destroy_all
 StartPoint.destroy_all
 User.destroy_all
+
+
 
 # Seed users
 puts 'creating users...'
@@ -46,6 +50,16 @@ user_3 = User.create!(
   phone_number:"0333333333"
   )
 
+user_4 = User.create!(
+  first_name:"Jean Jacques",
+  last_name:"Dutronc",
+  password:"password",
+  email:"testj@test.fr",
+  sex:"femme",
+  birth_date: Date.parse("03/03/1953"),
+  phone_number:"0444444"
+  )
+
 puts "#{User.count} users created"
 
 # def seed_photo(file_name)
@@ -60,8 +74,6 @@ end_point_1 = EndPoint.create!(
   long: 5.399851,
   lat: 43.304063
   )
-
-
 
 puts "#{EndPoint.count} end points created"
 
@@ -81,16 +93,24 @@ start_point_2 = StartPoint.create!(
   lat: 43.302852
   )
 
+start_point_3 = StartPoint.create!(
+  station: "Avigon TGV",
+  long: 5.380316,
+  lat: 43.302852
+  )
 
 puts "#{StartPoint.count} start points created"
 
 # Seed rides
 puts 'creating rides...'
 rides = [
+
+# train Marseille le 17
+
   {
-    train_ref: "6129",
+    train_ref: "6128",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("22h57").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 22, 57),
     user: user_3,
     passengers_allowed: 3,
     start_point: start_point_1,
@@ -99,12 +119,50 @@ rides = [
     car_model: "Mazerati"
   },
 
- {
+    {
     train_ref: "6129",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("22h57").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 16, 00),
+    user: user_1,
+    passengers_allowed: 4,
+    start_point: start_point_1,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+  {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 18, 00),
     user: user_2,
     passengers_allowed: 3,
+    start_point: start_point_1,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+  {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 18, 30),
+    user: user_2,
+    passengers_allowed: 1,
+    start_point: start_point_1,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+
+# train Marseille le 18
+ {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("18/12/2017"),
+    train_arrival_time: DateTime.new(2017, 12, 18, 13, 00),
+    user: user_2,
+    passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
@@ -114,20 +172,58 @@ rides = [
  {
     train_ref: "6129",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("22h57").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 07, 00),
     user: user_1,
-    passengers_allowed: 3,
+    passengers_allowed: 2,
     start_point: start_point_2,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206"
    },
+
+   {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 18, 30),
+    user: user_1,
+    passengers_allowed: 2,
+    start_point: start_point_3,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+
+    {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 10, 00),
+    user: user_1,
+    passengers_allowed: 3,
+    start_point: start_point_3,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+    {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 9, 00),
+    user: user_1,
+    passengers_allowed: 3,
+    start_point: start_point_3,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
   ]
 
 rides = Ride.create!(rides)
 puts "#{Ride.count} rides created"
 
-# Booking rides
+# Seed bookings
 puts 'creating bookings...'
 
 booking_1 = Booking.create!(

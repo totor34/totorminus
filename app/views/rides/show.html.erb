@@ -4,7 +4,7 @@
     <% if @ride.user.photo? %>
       <%= cl_image_tag @ride.user.photo.path, width: 50, height: 50, crop: :fill,class: 'image-circle', "data-toggle" => "dropdown" %>
       <% else %>
-      <%= image_tag 'default_avatar_pic.png', width: 50, height: 50, crop: :fill, class: 'image-circle', "data-toggle" => "dropdown" %>
+      <%= image_tag 'default_avatar_pic.svg', width: 50, height: 50, crop: :fill, class: 'image-circle', "data-toggle" => "dropdown" %>
       <% end %>
     </div>
 
