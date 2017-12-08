@@ -6,11 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'csv'
+
 Booking.destroy_all
 Ride.destroy_all
 EndPoint.destroy_all
 StartPoint.destroy_all
 User.destroy_all
+
+
 
 # Seed users
 puts 'creating users...'
@@ -71,8 +75,6 @@ end_point_1 = EndPoint.create!(
   lat: 43.304063
   )
 
-
-
 puts "#{EndPoint.count} end points created"
 
 
@@ -86,7 +88,7 @@ start_point_1 = StartPoint.create!(
   )
 
 start_point_2 = StartPoint.create!(
-  station: "Gare de Lille Flandre",
+  station: "Lille",
   long: 5.380316,
   lat: 43.302852
   )
@@ -192,7 +194,7 @@ rides = [
 rides = Ride.create!(rides)
 puts "#{Ride.count} rides created"
 
-# Booking rides
+# Seed bookings
 puts 'creating bookings...'
 
 booking_1 = Booking.create!(
