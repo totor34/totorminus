@@ -5,6 +5,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.ride = @ride
+    @booking.pending!
+raise
     if @booking.save
       redirect_to booking_path(@booking.id)
     else
@@ -14,6 +16,8 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+
+
   end
 
   private
@@ -23,3 +27,4 @@ class BookingsController < ApplicationController
   end
 
 end
+

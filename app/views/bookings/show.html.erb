@@ -8,7 +8,7 @@
         <p>Conducteur : <%= @booking.ride.user.first_name %> </p>
         <p>Arrivée de son train : le <%= @booking.ride.train_arrival_date.strftime(" %d %b %Y") %> à <%= @booking.ride.train_arrival_time.strftime("%Hh%M")  %></p>
         <p>Places réservées : <%= @booking.passenger_number %></p>
-        <p>Prix total : A RAJOUTER</p>
+        <p>Prix total : <%= humanized_money_with_symbol @booking.amount %> </p>
       </div>
     </div>
   </div>
@@ -25,10 +25,10 @@
     <div class="col-xs-10 col-xs-1-offset">
       <div class="car-with-passengers">
         <div class="car-passenger">
-          <%= cl_image_tag current_user.photo.path, height: 40, width: 40, class:'image-circle'  %>
+          <%= cl_image_tag choose_photo_path(current_user), height: 40, width: 40, class:'image-circle'  %>
         </div>
         <div class="car-driver">
-          <%= cl_image_tag @booking.ride.user.photo.path, height: 40, width: 40, class:'image-circle'  %>
+          <%= cl_image_tag choose_photo_path(@booking.ride.user), height: 40, width: 40, class:'image-circle'  %>
         </div>
         <div class="car">
           <%= image_tag 'car.svg', height: 200, width: 200 %>
@@ -36,3 +36,29 @@
       </div>
     </div>
 </div>
+
+
+<h1>Payer <%= @booking.amount %></h1>
+<%= form_tag booking_payments_path(@booking) do %>
+  <article>
+    <label class="amount">
+      <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
+    </label>
+  </article>
+
+ <div>
+<%= form_tag bookings_path do %>
+  <%= hidden_field_tag 'booking_id', @booking.id %>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Ride"
+    data-email="<%= current_user.email %>"
+    data-description="Booking <%= @booking.id %>"
+    data-amount="<%= @booking.amount_cents %>"
+    data-currency="<%= @booking.amount.currency %>"></script>
+
+<% end %>
+<% end %>
+</div>
+

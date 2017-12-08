@@ -28,6 +28,6 @@ class Ride < ApplicationRecord
   validates :train_arrival_date, presence: true
   validates :passengers_allowed, presence: true, inclusion: { in: (0..10), message: "Entrer un entier entre 0 et 10"}
   validates :description, presence: true
-
+  monetize :price_cents
 end
 

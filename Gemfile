@@ -29,6 +29,8 @@ gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 gem 'devise-i18n', '~> 1.2'
 gem 'rails-i18n', '5.0.3'
+gem 'money-rails'
+gem 'stripe'
 
 
 group :development, :test do
