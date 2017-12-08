@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.ride = @ride
     @booking.pending!
-raise
+
     if @booking.save
       redirect_to booking_path(@booking.id)
     else
