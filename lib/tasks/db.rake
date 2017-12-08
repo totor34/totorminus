@@ -26,7 +26,6 @@ namespace :db do
 
     stations = train_stations_list
 
-
     stations.each_with_index do |station, index|
       StartPoint.create!(stations[index])
     end
