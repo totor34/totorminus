@@ -18,7 +18,14 @@ class StartPoint < ApplicationRecord
   validates :lat, presence: true
 
   geocoded_by :station, latitude: :lat, longitude: :long
-  after_validation :geocode, if: :station_changed?
+  # for start point we don't need to activate geocode if station changed
+  # after_validation :geocode, if: :station_changed?
+  before_validation :geocode, on: :create, if: :geo_blank
+
+  def geo_blank
+    lat.blank? && long.blank?
+  end
+
 end
 
 
