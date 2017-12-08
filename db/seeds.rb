@@ -102,10 +102,13 @@ puts "#{StartPoint.count} start points created"
 # Seed rides
 puts 'creating rides...'
 rides = [
+
+# train Marseille le 17
+
   {
-    train_ref: "6129",
+    train_ref: "6128",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("22h57").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 22, 57),
     user: user_3,
     passengers_allowed: 3,
     start_point: start_point_1,
@@ -117,8 +120,20 @@ rides = [
     {
     train_ref: "6129",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("16h00").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 16, 00),
     user: user_1,
+    passengers_allowed: 4,
+    start_point: start_point_1,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+  {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 18, 00),
+    user: user_2,
     passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_1,
@@ -126,12 +141,26 @@ rides = [
     car_model: "206"
    },
 
+  {
+    train_ref: "6129",
+    train_arrival_date: Date.parse("17/12/2017"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 18, 30),
+    user: user_2,
+    passengers_allowed: 1,
+    start_point: start_point_1,
+    end_point: end_point_1,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206"
+   },
+
+
+# train Marseille le 18
  {
     train_ref: "6129",
     train_arrival_date: Date.parse("18/12/2017"),
-    train_arrival_time: Time.parse("13h00").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 18, 13, 00),
     user: user_2,
-    passengers_allowed: 3,
+    passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
@@ -141,9 +170,9 @@ rides = [
  {
     train_ref: "6129",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("07h00").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 07, 00),
     user: user_1,
-    passengers_allowed: 3,
+    passengers_allowed: 2,
     start_point: start_point_2,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
@@ -153,9 +182,9 @@ rides = [
    {
     train_ref: "6129",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("18h30").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 18, 30),
     user: user_1,
-    passengers_allowed: 3,
+    passengers_allowed: 2,
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
@@ -166,7 +195,7 @@ rides = [
     {
     train_ref: "6129",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("10h00").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 10, 00),
     user: user_1,
     passengers_allowed: 3,
     start_point: start_point_3,
@@ -178,7 +207,7 @@ rides = [
     {
     train_ref: "6129",
     train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: Time.parse("09h00").strftime("%H:%M"),
+    train_arrival_time: DateTime.new(2017, 12, 17, 9, 00),
     user: user_1,
     passengers_allowed: 3,
     start_point: start_point_3,

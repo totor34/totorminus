@@ -1,0 +1,10 @@
+fr:
+  time:
+    formats:
+      time_only: "%H:%M"
+
+
+fr:
+  date:
+    formats:
+      date_only: "%Y:%M:%D"

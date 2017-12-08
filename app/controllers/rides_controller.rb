@@ -7,9 +7,23 @@ class RidesController < ApplicationController
   def index
     @rides = Ride.all
     @search_params = params[:search]
+    search_arrival_time = @search_params[:train_arrival_time].to_i
+    search_passenger_number = @search_params[:passenger_number].to_i
+    @matching_train = @search_params[:train_ref]
+
     @matching_rides = @rides.select do |ride|
-      ride.start_point.station == @search_params[:start_point] && ride.train_arrival_date == @search_params[:train_arrival_date].to_date && ride.train_arrival_time.strftime("%Hh%M") >= @search_params[:train_arrival_time]
+      ride.start_point.station == @search_params[:start_point] \
+        && ride.train_arrival_date == @search_params[:train_arrival_date].to_date \
+        && ride.train_arrival_time.hour >= search_arrival_time \
+        && ride.passengers_allowed >= search_passenger_number
     end
+  end
+
+    #  @matching_train = @rides.select do |ride|
+    #   ride.start_point.station == @search_params[:start_point] \
+    #     &&
+    # end
+
 
 
         # On filtre les rides dont :
@@ -28,7 +42,7 @@ class RidesController < ApplicationController
               # entre (destination final form et destination final ride)
 
 
-  end
+
 
   def show
 
