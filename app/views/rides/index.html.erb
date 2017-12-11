@@ -9,9 +9,8 @@
 
 <div class="rides-wrapper">
   <div class="container">
-
-    <% @rides_same_train.each do |r| %>
-      <h3>Dans votre train !  </h3>
+    <h2>Dans votre train !  </h2>
+      <% @rides_same_train.each do |r| %>
         <div class="row">
             <%= render 'shared/rides_card_content', ride: r %>
         </div>
@@ -21,9 +20,9 @@
 
   <div class="container">
       <% @rides_not_same_train.each do |r| %>
-        <div class="row">
+
             <%= render 'shared/rides_card_content', ride: r %>
-        </div>
+
       <% end %>
   </div>
 

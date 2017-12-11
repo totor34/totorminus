@@ -161,7 +161,7 @@ rides = [
   },
 
     {
-    train_ref: "6129",
+    train_ref: "6130",
     train_arrival_at: DateTime.new(2017, 12, 17, 14, 8),
     user: user_1,
     passengers_allowed: 4,
@@ -174,7 +174,7 @@ rides = [
    },
 
   {
-    train_ref: "6129",
+    train_ref: "6131",
     train_arrival_at: DateTime.new(2017, 12, 17, 16, 15),
     user: user_2,
     passengers_allowed: 3,
@@ -186,7 +186,7 @@ rides = [
    },
 
   {
-    train_ref: "6129",
+    train_ref: "6130",
     train_arrival_at: DateTime.new(2017, 12, 17, 18, 33),
     user: user_2,
     passengers_allowed: 1,
@@ -201,7 +201,7 @@ rides = [
 # train Aix-en-Provence TGV le 18
  {
     train_ref: "6128",
-    train_arrival_at: DateTime.new(2017, 12, 18, 13, 00),
+    train_arrival_at: DateTime.new(2017, 12, 18, 11, 00),
     user: user_2,
     passengers_allowed: 1,
     start_point: start_point_1,

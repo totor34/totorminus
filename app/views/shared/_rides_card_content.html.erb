@@ -1,5 +1,27 @@
 
-<h3><%= ride.train_arrival_at.strftime(" %d %b %Y") %></h3>
-<p><%= ride.user.first_name %> >> <%= ride.start_point.station %> >> <%= ride.train_arrival_at.strftime("%Hh%M") %></p>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-8">
+    <h3>  <%= ride.train_arrival_at.strftime(" %d %b %Y") %></h3>
+    <p ><%= ride.start_point.station %> <strong>  Arrivée   </strong>     <%= ride.train_arrival_at.strftime("%Hh%M") %>
+    </p>
+  </div>
+</div>
 
-<%= link_to "Reservez !", ride_path(ride, request.query_parameters) %>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10 traject-card"><% @rides_same_train.each do |r| %>
+
+        <div>
+            <p><%= ride.user.first_name %> </p>
+        </div>
+        <div>
+            <p>    >>     </p>
+        </div>
+        <div>
+            <p> <%= ride.end_point.address %> >> <%= ride.price_cents/100 %>€</p>
+        </div>
+
+    <% end  %>
+  </div>
+</div>
+ <%= link_to "Reservez !", ride_path(ride, request.query_parameters) %>
+

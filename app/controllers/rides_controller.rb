@@ -20,11 +20,12 @@ class RidesController < ApplicationController
     }
 
     if params[:train_arrival_at].present?
+
       arrival_at = params[:train_arrival_at].to_datetime
 
       filters[:train_arrival_at] = arrival_at..arrival_at.tomorrow.at_midnight
-    end
 
+    end
 
     @rides_same_train = Ride.where(train_ref: matching_train)
     @rides_not_same_train =  Ride.joins(:start_point).where(filters)\
