@@ -7,6 +7,8 @@
 //= require underscore
 //= require gmaps/google
 //= require twitter/typeahead
+//= require moment
+//= require bootstrap-datetimepicker
 
 
 //= require_tree .

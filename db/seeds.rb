@@ -109,113 +109,113 @@ rides = [
 
   {
     train_ref: "6128",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 22, 57),
+    train_arrival_at: DateTime.new(2017, 12, 17, 22, 57),
     user: user_3,
     passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "Mazerati"
+    car_model: "Mazerati",
+    price_cents: 1000
   },
 
     {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 16, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 16, 00),
     user: user_1,
     passengers_allowed: 4,
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 800
    },
 
   {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 18, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 18, 00),
     user: user_2,
     passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 700
    },
 
   {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 18, 30),
+    train_arrival_at: DateTime.new(2017, 12, 17, 18, 30),
     user: user_2,
     passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 700
    },
 
 
 # train Marseille le 18
  {
     train_ref: "6129",
-    train_arrival_date: Date.parse("18/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 18, 13, 00),
+    train_arrival_at: DateTime.new(2017, 12, 18, 13, 00),
     user: user_2,
     passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "2 Cheveaux"
+    car_model: "2 Cheveaux",
+    price_cents: 450
    },
 
  {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 07, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 07, 00),
     user: user_1,
     passengers_allowed: 2,
     start_point: start_point_2,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
    {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 18, 30),
+    train_arrival_at: DateTime.new(2017, 12, 17, 18, 30),
     user: user_1,
     passengers_allowed: 2,
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
 
     {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 10, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 10, 00),
     user: user_1,
     passengers_allowed: 3,
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
     {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 9, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 9, 00),
     user: user_1,
     passengers_allowed: 3,
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
   ]

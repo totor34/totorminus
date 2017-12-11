@@ -2,13 +2,17 @@
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
       <div class="text-center">
+        <% if @booking.state == "paid" %>
         <h1>Réservation confirmée!</h1>
+        <%else%>
+        <h1>Réservation en cours</h1>
+        <%end%>
         <p>Départ: <%= @booking.start_point.station %></p>
         <p>Arrivée: <%= @booking.end_point.address %></p>
         <p>Conducteur : <%= @booking.ride.user.first_name %> </p>
-        <p>Arrivée de son train : le <%= @booking.ride.train_arrival_date.strftime(" %d %b %Y") %> à <%= @booking.ride.train_arrival_time.strftime("%Hh%M")  %></p>
+        <p>Arrivée de son train : le <%= @booking.ride.train_arrival_at.strftime(" %d %b %Y") %> à <%= @booking.ride.train_arrival_at.strftime("%Hh%M")  %></p>
         <p>Places réservées : <%= @booking.passenger_number %></p>
-        <p>Prix total : <%= humanized_money_with_symbol @booking.amount %> </p>
+        <p>Prix total : <%= humanized_money_with_symbol @booking.calculate_amount %> </p>
       </div>
     </div>
   </div>
@@ -39,28 +43,35 @@
     </div>
 </div>
 
+<% if @booking.state == "pending" %>
 
-<h1>Payer <%= @booking.amount %></h1>
 <%= form_tag booking_payments_path(@booking) do %>
   <article>
     <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
+      <span> Payer : <%= humanized_money_with_symbol(@booking.calculate_amount) %></span>
     </label>
   </article>
 
  <div>
-<%= form_tag bookings_path do %>
-  <%= hidden_field_tag 'booking_id', @booking.id %>
+    <%= form_tag bookings_path do %>
+      <%= hidden_field_tag 'booking_id', @booking.id %>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Ride"
-    data-email="<%= current_user.email %>"
-    data-description="Booking <%= @booking.id %>"
-    data-amount="<%= @booking.amount_cents %>"
-    data-currency="<%= @booking.amount.currency %>"></script>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-name="My Ride"
+        data-email="<%= current_user.email %>"
+        data-description="Booking <%= @booking.id %>"
+        data-amount="<%= @booking.amount_cents %>"
+        data-currency="<%= @booking.amount.currency %>"></script>
 
+    <% end %>
+    <% end %>
+
+    <%else%>
+    <div class="text-center">
+      <h1> A très bientôt sur Totorminus </h1>
+</div>
 <% end %>
-<% end %>
+
 </div>
 

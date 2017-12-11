@@ -24,10 +24,10 @@ class Ride < ApplicationRecord
   has_many :bookings
 
   validates :train_ref, presence: true
-  validates :train_arrival_time, presence: true
-  validates :train_arrival_date, presence: true
+  validates :train_arrival_at, presence: true
   validates :passengers_allowed, presence: true, inclusion: { in: (0..10), message: "Entrer un entier entre 0 et 10"}
   validates :description, presence: true
+  validates :price, presence: true
   monetize :price_cents
 end
 
