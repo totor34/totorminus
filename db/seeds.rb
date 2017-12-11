@@ -116,7 +116,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "Mazerati"
+    car_model: "Mazerati",
+    price_cents: 1000
   },
 
     {
@@ -128,7 +129,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 800
    },
 
   {
@@ -140,7 +142,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 700
    },
 
   {
@@ -152,7 +155,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 700
    },
 
 
@@ -166,7 +170,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "2 Cheveaux"
+    car_model: "2 Cheveaux",
+    price_cents: 450
    },
 
  {
@@ -178,7 +183,8 @@ rides = [
     start_point: start_point_2,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
    {
@@ -190,7 +196,8 @@ rides = [
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
 
@@ -203,7 +210,8 @@ rides = [
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
     {
@@ -215,7 +223,8 @@ rides = [
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
   ]

@@ -23,7 +23,10 @@ class Booking < ApplicationRecord
   monetize :amount_cents
 
 
+def calculate_amount
+  self.ride.price * self.passenger_number
 
+end
 
   # other possibility to avoid doing a belongs_to:end_point through :ride is :
   # def end_point
