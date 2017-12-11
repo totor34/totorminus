@@ -109,8 +109,7 @@ rides = [
 
   {
     train_ref: "6128",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 22, 57),
+    train_arrival_at: DateTime.new(2017, 12, 17, 22, 57),
     user: user_3,
     passengers_allowed: 3,
     start_point: start_point_1,
@@ -122,8 +121,7 @@ rides = [
 
     {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 16, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 16, 00),
     user: user_1,
     passengers_allowed: 4,
     start_point: start_point_1,
@@ -135,8 +133,7 @@ rides = [
 
   {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 18, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 18, 00),
     user: user_2,
     passengers_allowed: 3,
     start_point: start_point_1,
@@ -148,8 +145,7 @@ rides = [
 
   {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 18, 30),
+    train_arrival_at: DateTime.new(2017, 12, 17, 18, 30),
     user: user_2,
     passengers_allowed: 1,
     start_point: start_point_1,
@@ -163,8 +159,7 @@ rides = [
 # train Marseille le 18
  {
     train_ref: "6129",
-    train_arrival_date: Date.parse("18/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 18, 13, 00),
+    train_arrival_at: DateTime.new(2017, 12, 18, 13, 00),
     user: user_2,
     passengers_allowed: 1,
     start_point: start_point_1,
@@ -176,8 +171,7 @@ rides = [
 
  {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 07, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 07, 00),
     user: user_1,
     passengers_allowed: 2,
     start_point: start_point_2,
@@ -189,8 +183,7 @@ rides = [
 
    {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 18, 30),
+    train_arrival_at: DateTime.new(2017, 12, 17, 18, 30),
     user: user_1,
     passengers_allowed: 2,
     start_point: start_point_3,
@@ -203,8 +196,7 @@ rides = [
 
     {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 10, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 10, 00),
     user: user_1,
     passengers_allowed: 3,
     start_point: start_point_3,
@@ -216,8 +208,7 @@ rides = [
 
     {
     train_ref: "6129",
-    train_arrival_date: Date.parse("17/12/2017"),
-    train_arrival_time: DateTime.new(2017, 12, 17, 9, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 9, 00),
     user: user_1,
     passengers_allowed: 3,
     start_point: start_point_3,

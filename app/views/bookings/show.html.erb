@@ -10,7 +10,7 @@
         <p>Départ: <%= @booking.start_point.station %></p>
         <p>Arrivée: <%= @booking.end_point.address %></p>
         <p>Conducteur : <%= @booking.ride.user.first_name %> </p>
-        <p>Arrivée de son train : le <%= @booking.ride.train_arrival_date.strftime(" %d %b %Y") %> à <%= @booking.ride.train_arrival_time.strftime("%Hh%M")  %></p>
+        <p>Arrivée de son train : le <%= @booking.ride.train_arrival_at.strftime(" %d %b %Y") %> à <%= @booking.ride.train_arrival_at.strftime("%Hh%M")  %></p>
         <p>Places réservées : <%= @booking.passenger_number %></p>
         <p>Prix total : <%= humanized_money_with_symbol @booking.calculate_amount %> </p>
       </div>
