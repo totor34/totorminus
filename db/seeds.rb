@@ -6,11 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'csv'
+
 Booking.destroy_all
 Ride.destroy_all
 EndPoint.destroy_all
 StartPoint.destroy_all
 User.destroy_all
+
+
 
 # Seed users
 puts 'creating users...'
@@ -71,8 +75,6 @@ end_point_1 = EndPoint.create!(
   lat: 43.304063
   )
 
-
-
 puts "#{EndPoint.count} end points created"
 
 
@@ -86,7 +88,7 @@ start_point_1 = StartPoint.create!(
   )
 
 start_point_2 = StartPoint.create!(
-  station: "Gare de Lille Flandre",
+  station: "Lille",
   long: 5.380316,
   lat: 43.302852
   )
@@ -113,7 +115,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "Mazerati"
+    car_model: "Mazerati",
+    price_cents: 1000
   },
 
     {
@@ -124,7 +127,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 800
    },
 
   {
@@ -135,7 +139,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 700
    },
 
   {
@@ -146,7 +151,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 700
    },
 
 
@@ -159,7 +165,8 @@ rides = [
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "2 Cheveaux"
+    car_model: "2 Cheveaux",
+    price_cents: 450
    },
 
  {
@@ -170,7 +177,8 @@ rides = [
     start_point: start_point_2,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
    {
@@ -181,7 +189,8 @@ rides = [
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
 
@@ -193,7 +202,8 @@ rides = [
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
+    car_model: "206",
+    price_cents: 500
    },
 
     {
@@ -204,15 +214,16 @@ rides = [
     start_point: start_point_3,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
-    car_model: "206"
-   }
+    car_model: "206",
+    price_cents: 500
+   },
 
   ]
 
 rides = Ride.create!(rides)
 puts "#{Ride.count} rides created"
 
-# Booking rides
+# Seed bookings
 puts 'creating bookings...'
 
 booking_1 = Booking.create!(

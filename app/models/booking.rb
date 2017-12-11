@@ -19,6 +19,14 @@ class Booking < ApplicationRecord
 
   # enables to call end_point on @booking and returns @booking.ride.end_point
   delegate :end_point, :start_point, to: :ride
+  enum state: [:pending , :paid ]
+  monetize :amount_cents
+
+
+def calculate_amount
+  self.ride.price * self.passenger_number
+
+end
 
   # other possibility to avoid doing a belongs_to:end_point through :ride is :
   # def end_point

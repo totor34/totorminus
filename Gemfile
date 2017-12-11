@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'geocoder'
 gem 'coffee-rails'
 gem 'gmaps4rails'
+gem 'pg_search'
 
 # datetime picker
 gem 'momentjs-rails', '>= 2.9.0'
@@ -33,6 +34,8 @@ gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 gem 'devise-i18n', '~> 1.2'
 gem 'rails-i18n', '5.0.3'
+gem 'money-rails'
+gem 'stripe'
 
 
 group :development, :test do

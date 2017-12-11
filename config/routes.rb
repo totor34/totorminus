@@ -9,5 +9,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
-  resources :bookings, only: :show
+  resources :bookings, only: [:show, :create] do
+    resources :payments, only: [:new, :create]
+  end
 end
+
