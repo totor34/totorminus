@@ -27,7 +27,10 @@ class StartPoint < ApplicationRecord
   end
 
   include PgSearch
-  pg_search_scope :search_by_title_and_syllabus, against: [ :title, :syllabus ]
+  pg_search_scope :search_by_station, against: [ :station ],
+                  :using => {
+                    :tsearch => {:prefix => true}
+                  }
 
 end
 
