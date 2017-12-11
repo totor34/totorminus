@@ -1,4 +1,4 @@
-<h3><%= l(ride.train_arrival_date, format: :long) %></h3>
-<h3>Arrivée: <%= ride.start_point.station %> à <%= l(ride.train_arrival_time, format: :time_only) %></h3>
+<h3><%= ride.train_arrival_at.strftime(" %d %b %Y") %></h3>
+<h3>Arrivée: <%= ride.start_point.station %> à <%= ride.train_arrival_at.strftime("%Hh%M") %></h3>
 <p> <%= ride.user.first_name %>   >>  <%= ride.end_point.address %> >> <%= ride.car_model %> </p>
 <%= link_to " Reservez ! ", ride_path(ride, request.query_parameters) %>

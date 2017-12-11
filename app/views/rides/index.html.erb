@@ -9,12 +9,13 @@
 
 <div class="rides-wrapper">
   <div class="container">
+
+    <% @rides_same_train.each do |r| %>
       <h3>Dans votre train !  </h3>
-      <% @rides_same_train.each do |r| %>
         <div class="row">
             <%= render 'shared/rides_card_content', ride: r %>
         </div>
-        <% end %>
+    <% end %>
     </div>
   </div>
 
@@ -24,5 +25,6 @@
         <div class="row">
             <%= render 'shared/rides_card_content', ride: r %>
         </div>
-    </div>
-<% end %>
+      <% end %>
+  </div>
+
