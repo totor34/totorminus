@@ -12,6 +12,8 @@ class RidesController < ApplicationController
 
     matching_train = @search_params[:train_ref]
 
+
+
     filters = {
       start_points: { station: @search_params[:start_point]},
       train_arrival_at: arrival_at..arrival_at.tomorrow.at_midnight,
