@@ -14,6 +14,11 @@
         <%= @ride.user.first_name %>
       </div>
 
+      <div>
+        <%= @ride.price %> euros
+
+      </div>
+
       <p> Dans votre train</p>
 
       <div> <strong> Arrivant à :</strong> <%= @ride.start_point.station %>
@@ -74,12 +79,15 @@
 
     <%= @ride.description %> </p>
 
-</div>
 
 
+<div>
   <%= simple_form_for [@ride, @booking] , wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
         <%# f.error_notification %>
     <%= f.input :passenger_number, placeholder: "Nbre de passagers", input_html: {value: choose_passenger_value} %>
     <%= f.button :submit, "Réserver ce trajet", class: 'soft-angle' %>
   <% end %>
 
+</div>
+
+</div>
