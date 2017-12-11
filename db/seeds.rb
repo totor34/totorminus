@@ -72,10 +72,49 @@ puts "#{User.count} users created"
 puts 'creating end points...'
 
 end_point_1 = EndPoint.create!(
-  address: "22 rue des 3 frères Carasso 13004 Marseille",
-  long: 5.399851,
-  lat: 43.304063
+  address: "24 rue des Jardins 13300 Salon-de-Provence",
+  long: 5.099184,
+  lat: 43.642334
   )
+
+end_point_2 = EndPoint.create!(
+  address: "3 rue de l'Horloge 13300 Salon-de-Provence",
+  long: 5.097504,
+  lat: 43.640605
+  )
+
+end_point_3 = EndPoint.create!(
+  address: "142 cours Victor Hugo 13300 Salon-de-Provence ",
+  long: 5.098034,
+  lat: 43.641427
+  )
+
+end_point_4 = EndPoint.create!(
+  address: "50 rue Georges Clemenceau 13330 Pélissanne",
+  long: 5.149341,
+  lat: 43.631207
+  )
+
+end_point_5 = EndPoint.create!(
+  address: "27 rue de la République 13680 Lançon-de-Provence",
+  long: 5.125281,
+  lat: 43.590858
+  )
+
+end_point_6 = EndPoint.create!(
+  address: "12 place Saint-Anne 13450 Grans",
+  long: 5.063308,
+  lat: 43.606731
+  )
+
+end_point_7 = EndPoint.create!(
+  address: "12 place Saint-Anne 13450 Grans",
+  long: 5.063308,
+  lat: 43.606731
+  )
+
+
+
 
 puts "#{EndPoint.count} end points created"
 
@@ -84,7 +123,7 @@ puts "#{EndPoint.count} end points created"
 puts 'creating start points...'
 
 start_point_1 = StartPoint.create!(
-  station: "Marseille Saint-Charles",
+  station: "Aix-en-Provence TGV",
   long: 5.380316,
   lat: 43.302852
   )
@@ -107,11 +146,11 @@ puts "#{StartPoint.count} start points created"
 puts 'creating rides...'
 rides = [
 
-# train Marseille le 17
+# train Aix-en-Provence TGV le 17
 
   {
     train_ref: "6128",
-    train_arrival_at: DateTime.new(2017, 12, 17, 22, 57),
+    train_arrival_at: DateTime.new(2017, 12, 17, 12, 57),
     user: user_3,
     passengers_allowed: 3,
     start_point: start_point_1,
@@ -123,23 +162,24 @@ rides = [
 
     {
     train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 17, 16, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 14, 8),
     user: user_1,
     passengers_allowed: 4,
     start_point: start_point_1,
-    end_point: end_point_1,
-    description: "Rdv devant le Monop' dans la gare",
+    end_point: end_point_2,
+    description: "On se rejoint 5 min après l'arrivée du train,
+    voila mon portable : 0612345678  ",
     car_model: "206",
     price_cents: 800
    },
 
   {
     train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 17, 18, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 16, 15),
     user: user_2,
     passengers_allowed: 3,
     start_point: start_point_1,
-    end_point: end_point_1,
+    end_point: end_point_3,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
     price_cents: 700
@@ -147,37 +187,37 @@ rides = [
 
   {
     train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 17, 18, 30),
+    train_arrival_at: DateTime.new(2017, 12, 17, 18, 33),
     user: user_2,
     passengers_allowed: 1,
     start_point: start_point_1,
-    end_point: end_point_1,
+    end_point: end_point_6,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
     price_cents: 700
    },
 
 
-# train Marseille le 18
+# train Aix-en-Provence TGV le 18
  {
-    train_ref: "6129",
+    train_ref: "6128",
     train_arrival_at: DateTime.new(2017, 12, 18, 13, 00),
     user: user_2,
     passengers_allowed: 1,
     start_point: start_point_1,
-    end_point: end_point_1,
+    end_point: end_point_5,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "2 Cheveaux",
     price_cents: 450
    },
 
  {
-    train_ref: "6129",
+    train_ref: "6128",
     train_arrival_at: DateTime.new(2017, 12, 17, 07, 00),
     user: user_1,
     passengers_allowed: 2,
-    start_point: start_point_2,
-    end_point: end_point_1,
+    start_point: start_point_1,
+    end_point: end_point_7,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
     price_cents: 500

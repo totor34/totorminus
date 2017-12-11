@@ -20,7 +20,6 @@
   </div>
 
   <div class="container">
-      <h3>Autres trains </h3>
       <% @rides_not_same_train.each do |r| %>
         <div class="row">
             <%= render 'shared/rides_card_content', ride: r %>
