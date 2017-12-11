@@ -1,37 +1,40 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo_cropped.png", height: 50 %>
+    <%= image_tag "logo.png" %>
   <% end %>
 
   <!-- Dropdown list appearing on mobile and on desktop -->
-  <div class="navbar-wagon-item">
-    <div class="dropdown">
+<!--   <div class="navbar-wagon-item">
+ -->    <div class="dropdown">
       <% if user_signed_in? %>
-        <!-- Link My rides to build to dashboard -->
-        <%= link_to t(".profile", default: "Mes trajets"), root_path, class: "navbar-wagon-item navbar-wagon-link"  %>
+          <div class="navbar-wagon-right">
+            <!-- Link My rides to build to dashboard -->
+            <%= link_to t(".profile", default: "Mes trajets"), root_path, class: "navbar-wagon-item navbar-wagon-link"  %>
 
-        <% if current_user.photo? %>
-          <%= cl_image_tag current_user.photo.path, crop: :fill, class: 'avatar', "data-toggle" => "dropdown" %>
-        <% else %>
-          <%= image_tag 'default_avatar_pic.svg', crop: :fill, class: 'avatar', "data-toggle" => "dropdown" %>
-        <% end %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li><%= link_to edit_user_registration_path, method: :get do %>
-                 <%= t(".profile", default: "Mon profil") %>
-                <% end %>
+            <% if current_user.photo? %>
+              <%= cl_image_tag current_user.photo.path, crop: :fill, class: 'avatar', "data-toggle" => "dropdown" %>
+            <% else %>
+              <%= image_tag 'default_avatar_pic.svg', crop: :fill, class: 'avatar', "data-toggle" => "dropdown" %>
+            <% end %>
+              <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+                <li><%= link_to edit_user_registration_path, method: :get do %>
+                     <%= t(".profile", default: "Mon profil") %>
+                    <% end %>
 
-            </li>
-            <li><%= link_to destroy_user_session_path, method: :delete do %>
-                <%= t(".profile", default: "Se déconnecter") %>
-                <% end %>
-            </li>
-          </ul>
+                </li>
+                <li><%= link_to destroy_user_session_path, method: :delete do %>
+                    <%= t(".profile", default: "Se déconnecter") %>
+                    <% end %>
+                </li>
+              </ul>
+          </div>
+
       <% else %>
         <%= link_to t(".sign_in", default: "Se connecter"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
 
     </div>
-  </div>
-</div>
+<!--   </div>
+ --></div>
 

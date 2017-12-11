@@ -7,16 +7,23 @@ class RidesController < ApplicationController
   def index
     # @rides = Ride.all
     @search_params = params[:search]
-    arrival_at = params[:train_arrival_at].present? ? params[:train_arrival_at].to_datetime : nil
+
     passenger_number = @search_params[:passenger_number].to_i
 
     matching_train = @search_params[:train_ref]
 
+
+
     filters = {
       start_points: { station: @search_params[:start_point]},
-      train_arrival_at: arrival_at..arrival_at.tomorrow.at_midnight,
       passengers_allowed: passenger_number..10
     }
+
+    if params[:train_arrival_at].present?
+      arrival_at = params[:train_arrival_at].to_datetime
+
+      filters[:train_arrival_at] = arrival_at..arrival_at.tomorrow.at_midnight
+    end
 
 
     @rides_same_train = Ride.where(train_ref: matching_train)

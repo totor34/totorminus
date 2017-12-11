@@ -12,13 +12,14 @@
 
 /* Logo */
 .navbar-wagon-brand img {
-  height: 50px;
+  height: 15px;
+  text-align: center;
 }
 
 /* User Avatar */
 .navbar-wagon .avatar {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   box-shadow: 1px 1px 0px 0px rgba(0, 0, 255, .2);
 }
@@ -33,13 +34,13 @@
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 /* Navbar link */
 .navbar-wagon-link {
   color: #616668;
-  font-size: 14px;
+  font-size: 12px;
 }
 .navbar-wagon-link:hover {
   color: #00AFBC;

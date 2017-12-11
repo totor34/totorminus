@@ -20,14 +20,13 @@ User.destroy_all
 puts 'creating users...'
 
 user_1 = User.create!(
-  first_name:"Mathis",
-  last_name:"Clamens",
+  first_name:"Chloé",
+  last_name:"Beauchet",
   password:"password",
-  email:"testm@test.fr",
-  sex:"homme",
-  birth_date: Date.parse("01/01/1981"),
-  phone_number:"0111111111",
-  photo_url: "http://kitt.lewagon.com/placeholder/users/mathisclm"
+  email:"testcl@test.fr",
+  sex:"femme",
+  birth_date: Date.parse("01/01/1990"),
+  phone_number:"0111111111"
   )
 
 user_2 = User.create!(
@@ -37,7 +36,9 @@ user_2 = User.create!(
   email:"testv@test.fr",
   sex:"homme",
   birth_date: Date.parse("02/02/1982"),
-  phone_number:"0222222222"
+  phone_number:"0222222222",
+  photo_url: "http://kitt.lewagon.com/placeholder/users/totor34"
+
   )
 
 user_3 = User.create!(
@@ -47,7 +48,8 @@ user_3 = User.create!(
   email:"testc@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1983"),
-  phone_number:"0333333333"
+  phone_number:"0333333333",
+  photo_url: "http://kitt.lewagon.com/placeholder/users/cecilevarin"
   )
 
 user_4 = User.create!(
