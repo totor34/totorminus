@@ -26,6 +26,12 @@ class StartPoint < ApplicationRecord
     lat.blank? && long.blank?
   end
 
+  include PgSearch
+  pg_search_scope :search_by_station, against: [ :station ],
+                  :using => {
+                    :tsearch => {:prefix => true}
+                  }
+
 end
 
 

@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20171208174458) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -71,6 +70,9 @@ ActiveRecord::Schema.define(version: 20171208174458) do
 =======
     t.integer "price_cents", default: 0, null: false
     t.integer "remaining_seats"
+<<<<<<< HEAD
+=======
+>>>>>>> master
 >>>>>>> master
     t.index ["end_point_id"], name: "index_rides_on_end_point_id"
     t.index ["start_point_id"], name: "index_rides_on_start_point_id"

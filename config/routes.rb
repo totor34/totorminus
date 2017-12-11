@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [:show, :create] do
     resources :payments, only: [:new, :create]
   end
+
+  get 'autocomplete-station', to: 'start_points#autocomplete_stations'
 end
 

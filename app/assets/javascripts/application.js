@@ -6,6 +6,7 @@
 //= require attachinary
 //= require underscore
 //= require gmaps/google
+//= require twitter/typeahead
 //= require moment
 //= require bootstrap-datetimepicker
 
