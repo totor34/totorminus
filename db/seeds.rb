@@ -233,3 +233,8 @@ booking_1 = Booking.create!(
   )
 puts "#{Booking.count} bookings created"
 
+# Seeding stations
+puts 'listing the 4700 FR stations... can take a while'
+Rake::Task['db:seed_stations'].invoke
+puts "#{StartPoint.count} stations created"
+
