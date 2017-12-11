@@ -20,14 +20,13 @@ User.destroy_all
 puts 'creating users...'
 
 user_1 = User.create!(
-  first_name:"Mathis",
-  last_name:"Clamens",
+  first_name:"Chloé",
+  last_name:"Beauchet",
   password:"password",
-  email:"testm@test.fr",
-  sex:"homme",
-  birth_date: Date.parse("01/01/1981"),
-  phone_number:"0111111111",
-  photo_url: "http://kitt.lewagon.com/placeholder/users/mathisclm"
+  email:"testcl@test.fr",
+  sex:"femme",
+  birth_date: Date.parse("01/01/1990"),
+  phone_number:"0111111111"
   )
 
 user_2 = User.create!(
