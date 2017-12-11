@@ -8,7 +8,7 @@
         <p>Conducteur : <%= @booking.ride.user.first_name %> </p>
         <p>Arrivée de son train : le <%= @booking.ride.train_arrival_date.strftime(" %d %b %Y") %> à <%= @booking.ride.train_arrival_time.strftime("%Hh%M")  %></p>
         <p>Places réservées : <%= @booking.passenger_number %></p>
-        <p>Prix total : <%= humanized_money_with_symbol @booking.amount %> </p>
+        <p>Prix total : <%= humanized_money_with_symbol @booking.calculate_amount %> </p>
       </div>
     </div>
   </div>
@@ -40,11 +40,11 @@
 </div>
 
 
-<h1>Payer <%= @booking.amount %></h1>
+<h1>Payer <%= @booking.calculate_amount %></h1>
 <%= form_tag booking_payments_path(@booking) do %>
   <article>
     <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
+      <span>Amount: <%= humanized_money_with_symbol(@booking.calculate_amount) %></span>
     </label>
   </article>
 

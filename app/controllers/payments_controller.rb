@@ -11,9 +11,9 @@ class PaymentsController < ApplicationController
 
   charge = Stripe::Charge.create(
     customer:     customer.id,   # You should store this customer id and re-use it.
-    amount:       @booking.amount_cents,
-    description:  "Payment for Ride #{@ride.id} for booking #{@booking.id}",
-    currency:     @booking.amount.currency
+    amount:       @booking.calculate_amount.cents,
+    description:  "Paiement pour votre trajet",
+    currency:     "eur"
   )
 
   @booking.update(payment: charge.to_json, state: 'paid')
@@ -28,12 +28,10 @@ class PaymentsController < ApplicationController
 
 
 
-
-
 private
 
   def set_order
-    @Booking = Booking.where(state: 0).find(params[:booking_id])
+    @booking = Booking.where(state: 0).find(params[:booking_id])
   end
 end
 
