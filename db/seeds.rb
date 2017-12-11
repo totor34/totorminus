@@ -36,7 +36,8 @@ user_2 = User.create!(
   email:"testv@test.fr",
   sex:"homme",
   birth_date: Date.parse("02/02/1982"),
-  phone_number:"0222222222"
+  phone_number:"0222222222",
+  photo_url: "http://kitt.lewagon.com/placeholder/users/totor34"
 
   )
 
@@ -47,7 +48,8 @@ user_3 = User.create!(
   email:"testc@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1983"),
-  phone_number:"0333333333"
+  phone_number:"0333333333",
+  photo_url: "http://kitt.lewagon.com/placeholder/users/cecilevarin"
   )
 
 user_4 = User.create!(

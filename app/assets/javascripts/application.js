@@ -8,6 +8,7 @@
 //= require gmaps/google
 //= require twitter/typeahead
 //= require moment
+//= require moment/fr.js
 //= require bootstrap-datetimepicker
 
 
