@@ -13,11 +13,12 @@
 /* Logo */
 .navbar-wagon-brand img {
   height: 15px;
+  vertical-align: inherit;
 }
 
-.navbar-wagon-brand {
-  height: 30px;
-}
+// .navbar-wagon-brand {
+//   height: 30px;
+// }
 
 /* User Avatar */
 .navbar-wagon .avatar {
