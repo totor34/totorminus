@@ -1,16 +1,25 @@
 
 
-<% rides.each do |ride| %>
-  <%= link_to ride_path(ride) do %>
+<% rides.each do |r| %>
+  <%= link_to ride_path(r) do %>
     <div class="col-xs-offset-1 col-xs-10 traject-card mb-">
-      <div>
-          <p><%= ride.user.first_name %> </p>
+      <div class= "card-content-sides col-xs-4">
+        <div>
+          <% if r.user.photo? %>
+            <%= cl_image_tag r.user.photo.path, width: 50, height: 50, crop: :fill,class: 'image-circle ', "data-toggle" => "dropdown" %>
+            <% else %>
+            <%= image_tag 'default_avatar_pic.svg', width: 50, height: 50, crop: :fill, class: 'image-circle', "data-toggle" => "dropdown" %>
+            <% end %>
+        </div>
+        <div>
+          <p class="pl"><%= r.user.first_name %> </p>
+        </div>
       </div>
-      <div>
-          <p>    >>     </p>
+      <div class= "col-xs-offset-1 col-xs-2">
+          <p>         </p>
       </div>
-      <div>
-          <p> <%= ride.end_point.address %> >> <%= ride.price_cents/100 %>€</p>
+      <div class= "card-content-sides col-xs-6">
+          <p> <%= r.end_point.address.split(" ").last %> - <%= r.price_cents/100 %>€/Pers</p>
       </div>
     </div>
   <% end  %>

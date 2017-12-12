@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(234deg, white 20%, #b8dbd9);
+  background: linear-gradient(270deg, white 2%, #b8dbd9);
   height: 100%;
 }
 
@@ -19,7 +19,7 @@ html {
 }
 
 .rides-wrapper {
-  background-color: lightgrey;
+  background: linear-gradient(270deg, white 2%, #F0E3F1);
   width: 100%;
 }
 
@@ -59,6 +59,18 @@ html {
 // }
 
 
+
+
+.card-content-sides {
+  display: flex;
+  align-items:center;
+
+}
+
+.card-content-sides p {
+ font-size: 14px;
+ color: #0B757D;
+}
 
 .image-circle {
   border-radius: 50%;
