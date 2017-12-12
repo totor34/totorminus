@@ -10,3 +10,4 @@ $(function () {
       $('#hdp').val(formatted_date);
     });
 });
+
