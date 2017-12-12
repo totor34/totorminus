@@ -6,23 +6,42 @@
   </div>
 </div>
 
+<% if @rides_same_train.any? %>
+  <div class="rides-wrapper ">
+    <div class="container">
+      <h2>Dans votre train !  </h2>
 
-<div class="rides-wrapper">
-  <div class="container">
-    <h2>Dans votre train !  </h2>
-      <% @rides_same_train.each do |r| %>
-        <div class="row">
-            <%= render 'shared/rides_card_content', ride: r %>
-        </div>
-    <% end %>
+          <div class="row">
+            <div class="row">
+              <div class="col-xs-offset-1 col-xs-8">
+                  <h3>  <%= @rides_same_train.first.train_arrival_at.strftime(" %d %b %Y") %></h3>
+                  <p ><%= @rides_same_train.first.start_point.station %> <strong>  Arrivée   </strong>     <%= @rides_same_train.first.train_arrival_at.strftime("%Hh%M") %>
+                  </p>
+              </div>
+            </div>
+
+            <div class="row">
+                <%= render 'ride', rides: @rides_same_train %>
+            </div>
+          </div>
+
+      </div>
     </div>
-  </div>
+ <% end %>
 
   <div class="container">
-      <% @rides_not_same_train.each do |r| %>
+      <div class="row">
+        <% @rides_not_same_train.each do |ride|%>
+         <h3> <%= ride.train_arrival_at.strftime(" %d %b %Y")%></h3>
+          <div class="col-xs-offset-1 col-xs-8">
+            <p ><%= ride.start_point.station %> <strong>  Arrivée   </strong>     <%= ride.train_arrival_at.strftime("%Hh%M") %>
+            </p>
+        </div>
 
-            <%= render 'shared/rides_card_content', ride: r %>
-
-      <% end %>
+      <div class="row">
+      <%= render 'ride', rides: @rides_not_same_train %>
+    </div>
+    <% end %>
   </div>
 
+  </div>
