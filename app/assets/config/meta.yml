@@ -1,0 +1,5 @@
+meta_product_name: "TOTORMINUS"
+meta_title: "Totorminus - Trouve ton covoit' parmi tes voisins de train"
+meta_description: "Totorminus est une application de covoiturage qui te permet de rentrer jusqu'à ta ville de destination grâce à un passager du train dans lequel tu voyages."
+meta_image: "cover.png"                       # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
