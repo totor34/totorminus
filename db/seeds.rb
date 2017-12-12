@@ -20,12 +20,12 @@ User.destroy_all
 puts 'creating users...'
 
 user_1 = User.create!(
-  first_name:"Chloé",
-  last_name:"Beauchet",
+  first_name:"Mathis",
+  last_name:"Clamens",
   password:"password",
-  email:"testcl@test.fr",
-  sex:"femme",
-  birth_date: Date.parse("01/01/1990"),
+  email:"testm@test.fr",
+  sex:"homme",
+  birth_date: Date.parse("23/07/1992"),
   phone_number:"0111111111"
   )
 
@@ -62,6 +62,34 @@ user_4 = User.create!(
   phone_number:"0444444"
   )
 
+user_5 = User.create!(
+  first_name:"Chloé",
+  last_name:"Bauchet",
+  password:"password",
+  email:"testcl@test.fr",
+  sex:"femme",
+  birth_date: Date.parse("03/03/1990"),
+  phone_number:"0444444"
+  )
+
+user_6 = User.create!(
+  first_name:"Léa",
+  last_name:"Hardy",
+  password:"password",
+  email:"testl@test.fr",
+  sex:"femme",
+  birth_date: Date.parse("03/03/1990"),
+  phone_number:"0444444"
+  )
+user_7 = User.create!(
+  first_name:"Albert",
+  last_name:"Heroku",
+  password:"password",
+  email:"testa@test.fr",
+  sex:"homme",
+  birth_date: Date.parse("03/03/1990"),
+  phone_number:"0444444"
+  )
 puts "#{User.count} users created"
 
 # def seed_photo(file_name)
@@ -72,10 +100,49 @@ puts "#{User.count} users created"
 puts 'creating end points...'
 
 end_point_1 = EndPoint.create!(
-  address: "22 rue des 3 frères Carasso 13004 Marseille",
-  long: 5.399851,
-  lat: 43.304063
+  address: "2 Rue du Puit de la Muse 13122 Ventabrun",
+  long: 5.293873,
+  lat: 43.538265
   )
+
+end_point_5 = EndPoint.create!(
+  address: "17 Grand Rue 13122 Ventabren",
+  long: 5.292946,
+  lat: 43.539087
+  )
+
+end_point_3 = EndPoint.create!(
+  address: "3 Chemin de Tabari 13122 Ventabren",
+  long: 5.291916,
+  lat: 43.539530
+  )
+
+end_point_2 = EndPoint.create!(
+  address: "11 Rue des Lotins 13510 Éguilles",
+  long: 5.351738,
+  lat: 43.570154
+  )
+
+end_point_4 = EndPoint.create!(
+  address: "26 Rue Chante Pleure 13790 Châteauneuf-le-Rouge",
+  long: 5.568500,
+  lat: 43.488161
+  )
+
+end_point_6 = EndPoint.create!(
+  address: "12 place Saint-Anne 13450 Grans",
+  long: 5.063308,
+  lat: 43.606731
+  )
+
+end_point_7 = EndPoint.create!(
+  address: "12 place Saint-Anne 13450 Grans",
+  long: 5.063308,
+  lat: 43.606731
+  )
+
+
+
 
 puts "#{EndPoint.count} end points created"
 
@@ -84,7 +151,7 @@ puts "#{EndPoint.count} end points created"
 puts 'creating start points...'
 
 start_point_1 = StartPoint.create!(
-  station: "Marseille Saint-Charles",
+  station: "Aix-en-Provence TGV",
   long: 5.380316,
   lat: 43.302852
   )
@@ -107,77 +174,118 @@ puts "#{StartPoint.count} start points created"
 puts 'creating rides...'
 rides = [
 
-# train Marseille le 17
+# train Aix-en-Provence TGV le 15
 
   {
     train_ref: "6128",
-    train_arrival_at: DateTime.new(2017, 12, 17, 22, 57),
-    user: user_3,
+    train_arrival_at: DateTime.new(2017, 12, 15, 8, 57),
+    user: user_1,
     passengers_allowed: 3,
     start_point: start_point_1,
-    end_point: end_point_1,
+    end_point: end_point_3,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "Mazerati",
     price_cents: 1000
   },
 
-    {
+  {
     train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 17, 16, 00),
-    user: user_1,
-    passengers_allowed: 4,
+    train_arrival_at: DateTime.new(2017, 12, 15, 19, 2),
+    user: user_2,
+    passengers_allowed: 3,
+    start_point: start_point_1,
+    end_point: end_point_2,
+    description: "Rdv devant le Monop' dans la gare",
+    car_model: "206",
+    price_cents: 700
+   },
+
+  {
+    train_ref: "6129",
+   train_arrival_at: DateTime.new(2017, 12, 15, 19, 2),
+    user: user_7,
+    passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
+    car_model: "206",
+    price_cents: 700
+   },
+
+    {
+    train_ref: "6129",
+    train_arrival_at: DateTime.new(2017, 12, 15, 19, 2),
+    user: user_4,
+    passengers_allowed: 4,
+    start_point: start_point_1,
+    end_point: end_point_4,
+    description: "On se rejoint 5 min après l'arrivée du train,
+    voila mon portable : 0612345678  ",
     car_model: "206",
     price_cents: 800
    },
 
-  {
-    train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 17, 18, 00),
-    user: user_2,
-    passengers_allowed: 3,
+      {
+    train_ref: "6130",
+    train_arrival_at: DateTime.new(2017, 12, 15, 20, 23),
+    user: user_5,
+    passengers_allowed: 4,
     start_point: start_point_1,
-    end_point: end_point_1,
-    description: "Rdv devant le Monop' dans la gare",
+    end_point: end_point_5,
+    description: "On se rejoint 5 min après l'arrivée du train,
+    voila mon portable : 0612345678  ",
     car_model: "206",
-    price_cents: 700
+    price_cents: 800
    },
 
-  {
-    train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 17, 18, 30),
-    user: user_2,
-    passengers_allowed: 1,
+     {
+    train_ref: "6130",
+    train_arrival_at: DateTime.new(2017, 12, 15, 20, 23),
+    user: user_6,
+    passengers_allowed: 4,
     start_point: start_point_1,
-    end_point: end_point_1,
-    description: "Rdv devant le Monop' dans la gare",
+    end_point: end_point_6,
+    description: "On se rejoint 5 min après l'arrivée du train,
+    voila mon portable : 0612345678  ",
     car_model: "206",
-    price_cents: 700
+    price_cents: 800
    },
 
 
-# train Marseille le 18
+      {
+    train_ref: "6131",
+    train_arrival_at: DateTime.new(2017, 12, 15, 22, 45),
+    user: user_3,
+    passengers_allowed: 4,
+    start_point: start_point_1,
+    end_point: end_point_7,
+    description: "On se rejoint 5 min après l'arrivée du train,
+    voila mon portable : 0612345678  ",
+    car_model: "206",
+    price_cents: 800
+   },
+
+
+# train Aix-en-Provence TGV le 18
  {
-    train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 18, 13, 00),
+    train_ref: "6128",
+    train_arrival_at: DateTime.new(2017, 12, 18, 11, 00),
     user: user_2,
     passengers_allowed: 1,
     start_point: start_point_1,
-    end_point: end_point_1,
+    end_point: end_point_5,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "2 Cheveaux",
     price_cents: 450
    },
 
  {
-    train_ref: "6129",
+    train_ref: "6128",
     train_arrival_at: DateTime.new(2017, 12, 17, 07, 00),
     user: user_1,
     passengers_allowed: 2,
-    start_point: start_point_2,
-    end_point: end_point_1,
+    start_point: start_point_1,
+    end_point: end_point_7,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
     price_cents: 500
@@ -185,7 +293,7 @@ rides = [
 
    {
     train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 17, 18, 30),
+    train_arrival_at: DateTime.new(2017, 12, 17, 20, 30),
     user: user_1,
     passengers_allowed: 2,
     start_point: start_point_3,
@@ -198,7 +306,7 @@ rides = [
 
     {
     train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 17, 10, 00),
+    train_arrival_at: DateTime.new(2017, 12, 17, 20, 00),
     user: user_1,
     passengers_allowed: 3,
     start_point: start_point_3,
@@ -214,7 +322,7 @@ rides = [
     user: user_1,
     passengers_allowed: 3,
     start_point: start_point_3,
-    end_point: end_point_1,
+    end_point: end_point_7,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
     price_cents: 500

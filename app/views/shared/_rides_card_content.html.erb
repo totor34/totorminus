@@ -1,5 +1,0 @@
-
-<h3><%= ride.train_arrival_at.strftime(" %d %b %Y") %></h3>
-<p><%= ride.user.first_name %> >> <%= ride.start_point.station %> >> <%= ride.train_arrival_at.strftime("%Hh%M") %></p>
-
-<%= link_to "Reservez !", ride_path(ride, request.query_parameters) %>
