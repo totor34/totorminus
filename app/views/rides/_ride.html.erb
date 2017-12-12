@@ -1,7 +1,5 @@
-
-
 <% rides.each do |r| %>
-  <%= link_to ride_path(r) do %>
+  <%= link_to ride_path(r, request.query_parameters) do %>
     <div class="col-xs-offset-1 col-xs-10 traject-card mb-">
       <div class= "card-content-sides col-xs-4">
         <div>

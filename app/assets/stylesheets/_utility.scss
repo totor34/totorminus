@@ -43,24 +43,6 @@ html {
   text-decoration: none;
 }
 
-
-// .btn-medium {
-//   color: #999999;
-//   border: 1px solid #999999;
-//   padding: 10px 15px;
-//   border-radius: 50px;
-//   font-weight: lighter;
-//   opacity: 0.6;
-// }
-// .btn-medium:hover {
-//   opacity: 1;
-//   text-decoration: none;
-//   color: #999999;
-// }
-
-
-
-
 .card-content-sides {
   display: flex;
   align-items:center;
@@ -82,6 +64,10 @@ html {
 
 .container-content h1 {
   font-size: 36px;
+}
+
+.container-content h2 {
+  color: $totor-color;
 }
 
 .container-content p {
