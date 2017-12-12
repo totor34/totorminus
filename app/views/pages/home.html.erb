@@ -1,7 +1,7 @@
  <div class="container">
 
   <div class="h"></div>
-  <form action="<%= rides_path %>" method= "get">
+  <form action="<%= rides_path %>" method= "get" id="totor-form">
 
     <div class="tagline mt">
       <div class="row">
@@ -76,6 +76,23 @@
     <input type="submit" name="submit-button" value =" Chercher un trajet" class="btn btn-default col-xs-12 soft-angle height-form-60 pd" href="">
 
   </form>
+
+<!--   <%= image_tag "totorminus14.gif", class: "loading hidden" %>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script>
+  $('form').submit( function(event) {
+    var formId = this.id,
+        form = this;
+    $(this).addClass("hidden");
+    $(".loading").removeClass("hidden").addClass("show");
+
+    event.preventDefault();
+
+    setTimeout( function () {
+        form.submit();
+    }, 2000);
+});
+</script> -->
 
