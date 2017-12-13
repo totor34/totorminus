@@ -26,7 +26,8 @@ user_1 = User.create!(
   email:"testm@test.fr",
   sex:"homme",
   birth_date: Date.parse("23/07/1992"),
-  phone_number:"0111111111"
+  phone_number:"0111111111",
+  photo_url: "http://kitt.lewagon.com/placeholder/users/mathisclm"
   )
 
 user_2 = User.create!(
@@ -53,13 +54,14 @@ user_3 = User.create!(
   )
 
 user_4 = User.create!(
-  first_name:"Jean Jacques",
-  last_name:"Dutronc",
+  first_name:"Sami",
+  last_name:"Naceri",
   password:"password",
   email:"testj@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1953"),
-  phone_number:"0444444"
+  phone_number:"0444444",
+  photo_url: "http://www.insolitemag.com/wp-content/uploads/2017/08/343175.1.jpg"
   )
 
 user_5 = User.create!(
@@ -69,26 +71,30 @@ user_5 = User.create!(
   email:"testcl@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1990"),
-  phone_number:"0444444"
+  phone_number:"0444444",
+  photo_url: "https://avatars2.githubusercontent.com/u/32484761?v=4"
   )
 
 user_6 = User.create!(
-  first_name:"Léa",
-  last_name:"Hardy",
+  first_name:"Killian",
+  last_name:"Avocat",
   password:"password",
   email:"testl@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1990"),
-  phone_number:"0444444"
+  phone_number:"0444444",
+  photo_url: "https://avatars1.githubusercontent.com/u/22000551?s=400&v=4"
   )
+
 user_7 = User.create!(
-  first_name:"Albert",
-  last_name:"Heroku",
+  first_name:"Scarlett",
+  last_name:"scarlett johansson",
   password:"password",
   email:"testa@test.fr",
   sex:"homme",
   birth_date: Date.parse("03/03/1990"),
-  phone_number:"0444444"
+  phone_number:"0444444",
+  photo_url: "http://i.f1g.fr/media/ext/1900x1900/madame.lefigaro.fr/sites/default/files/img/2017/03/le-parcours-capillaire-de-scarlett-johansson-photo-14.jpg"
   )
 puts "#{User.count} users created"
 
@@ -124,7 +130,7 @@ end_point_2 = EndPoint.create!(
   )
 
 end_point_4 = EndPoint.create!(
-  address: "26 Rue Chante Pleure 13790 Châteauneuf-le-Rouge",
+  address: "26 Rue Chante Pleure 13790 Éguilles",
   long: 5.568500,
   lat: 43.488161
   )
@@ -221,7 +227,7 @@ rides = [
     end_point: end_point_4,
     description: "On se rejoint 5 min après l'arrivée du train,
     voila mon portable : 0612345678  ",
-    car_model: "206",
+    car_model: "Peugeot 406",
     price_cents: 800
    },
 
