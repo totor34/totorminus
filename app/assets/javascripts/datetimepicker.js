@@ -36,7 +36,9 @@ $( document ).ready(function() {
         var formatted_date = event.date.format('DD MMM YYYY');
         $('#date-select').empty();
         $('#date-select').append('Le: ' + "<br/>" + formatted_date);
+        $('#date-select').removeClass('color-totor-light-gray');
         $('.datepicker-days').toggle(false);
+
       }
     });
 
@@ -47,7 +49,8 @@ $( document ).ready(function() {
         var formatted_date = event.date.format('HH:mm');
         $('#time-select').empty();
         $('#time-select').append('À: ' + "<br/>" + formatted_date);
-        $('.timepicker').toggle(false);
+        $('#time-select').removeClass('color-totor-light-gray');
+        // $('.timepicker').toggle(false);
       }
     });
 
