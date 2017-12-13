@@ -13,7 +13,7 @@ $(function () {
 
 
 $( document ).ready(function() {
-  var lastFieldClicked;
+  var lastFieldClicked = '';
 
   $('.datepicker-days').hide();
   $('.timepicker').hide();
@@ -47,7 +47,7 @@ $( document ).ready(function() {
         var formatted_date = event.date.format('HH:mm');
         $('#time-select').empty();
         $('#time-select').append('À: ' + "<br/>" + formatted_date);
-        $('.timepicker').toggle(false);
+        // $('.timepicker').toggle(false);
       }
     });
 
