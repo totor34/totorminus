@@ -13,18 +13,18 @@ $(function () {
 
 
 $( document ).ready(function() {
-  let lastFieldClicked;
+  var last_field_clicked = '';
 
   $('.datepicker-days').hide();
   $('.timepicker').hide();
 
 
   $('#date-select').on('click', function(event) {
-      lastFieldClicked = 'date';
+      last_field_clicked = 'date';
       $('.datepicker-days').toggle();
     });
   $('#time-select').on('click', function(event) {
-      lastFieldClicked = 'time';
+      last_field_clicked = 'time';
       $('.timepicker').toggle();
     });
 
@@ -32,7 +32,7 @@ $( document ).ready(function() {
   $('#datetimepicker12').on('dp.change', function(event) {
       // console.log(moment(event.date).format('MM/DD/YYYY h:mm a'));
       // console.log(event.date.format('MM/DD/YYYY h:mm a'));
-      if (lastFieldClicked == 'date') {
+      if (last_field_clicked == 'date') {
         var formatted_date = event.date.format('DD MMM YYYY');
         $('#date-select').empty();
         $('#date-select').append('Le: ' + "<br/>" + formatted_date);
@@ -43,11 +43,11 @@ $( document ).ready(function() {
  $('#datetimepicker12').on('dp.change', function(event) {
       // console.log(moment(event.date).format('M M/DD/YYYY h:mm a'));
       // console.log(event.date.format('MM/DD/YYYY h:mm a'));
-      if (lastFieldClicked == 'time') {
+      if (last_field_clicked == 'time') {
         var formatted_date = event.date.format('HH:mm');
         $('#time-select').empty();
         $('#time-select').append('À: ' + "<br/>" + formatted_date);
-        $('.timepicker').toggle(false);
+        // $('.timepicker').toggle(false);
       }
     });
 
