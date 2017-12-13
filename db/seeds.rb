@@ -365,3 +365,6 @@ puts 'listing the 4700 FR stations... can take a while'
 Rake::Task['db:seed_stations'].invoke
 puts "#{StartPoint.count} stations created"
 
+# Aix en Provence à enlever du csv pour éviter les doublons dans le dropdown. Ligne ci-dessous coupée de trainline-eu_stations.csv
+# 233;Aix-en-Provence TGV;aix-en-provence-tgv;8731901;87319012;43.455237;5.317534;23614;FR;Europe/Paris;f;f;f;t;f;f;FRAIE;AXV;t;AIE;t;8704980;t;;f;;f;;f;;f;AIE;t;8731901;f;;;;f;;f;8700912;t;;f;FRAIE;t;t;;;;;;;;;;;;エクス＝アン＝プロヴァンス;엑상프로방스;;;Экс-ан-Прованс;;;普罗旺斯地区艾克斯
+

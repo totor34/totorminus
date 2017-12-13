@@ -1,34 +1,13 @@
 span.twitter-typeahead {
   width: 100%;
-  // input {
-  //   border-top-left-radius: $border-radius !important;
-  //   border-bottom-left-radius: $border-radius !important;
-  // }
-  .tt-menu {
-    background-color: white;
-    width: 100%;
-  }
-  // .tt-suggestion {
-  //   @extend .dropdown-item;
-  // }
-  // .tt-suggestion.tt-cursor {
-  //    @extend .dropdown-item.active;
-  // }
-  .tt-suggestion.tt-cursor,.tt-suggestion:hover {
-    // color: $white;
-    // background-color: $purple;
-  }
-  .input-group & {
-    display: block !important;
+
     .tt-menu {
-      // top:(2 * $input-padding-y + $font-size-base*$line-height-base + 2 * $input-btn-border-width/$font-size-root) !important;
+      background-color: white;
       width: 100%;
-      // max-height: 500px;
-      // margin-top: 4px;
-      padding: 4px 0;
+      padding: 6px 0;
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 4px;
-      color: $totor-color;
+      font-size: 12px;
       box-shadow: 0 5px 10px rgba(0,0,0,.2);
       overflow-y: auto;
       .item-name {
@@ -37,12 +16,12 @@ span.twitter-typeahead {
         border-bottom: 1px solid #ccc;
       }
       .tt-suggestion {
-        padding: 3px 20px;
+        padding: 6px 20px;
         line-height: 24px;
         p {
           margin: 0;
         }
       }
     }
-  }
+  // }
 }
