@@ -11,7 +11,6 @@ class RidesController < ApplicationController
     passenger_number = @search_params[:passenger_number].to_i
 
     matching_train = @search_params[:train_ref]
-
     filters = {
       start_points: { station: @search_params[:start_point]},
       passengers_allowed: passenger_number..10
