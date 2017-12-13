@@ -30,16 +30,16 @@ $( document ).ready(function() {
       $('#date-select').empty();
       // console.log(moment(event.date).format('MM/DD/YYYY h:mm a'));
       // console.log(event.date.format('MM/DD/YYYY h:mm a'));
-      var formatted_date = event.date.format('YYYY-MM-DD');
-      $('#date-select').append(formatted_date);
+      var formatted_date = event.date.format('DD MMM YYYY');
+      $('#date-select').append('Le: ' + "<br/>" + formatted_date);
     });
 
  $('#datetimepicker12').on('dp.change', function(event) {
       $('#time-select').empty();
-      // console.log(moment(event.date).format('MM/DD/YYYY h:mm a'));
+      // console.log(moment(event.date).format('M M/DD/YYYY h:mm a'));
       // console.log(event.date.format('MM/DD/YYYY h:mm a'));
       var formatted_date = event.date.format('HH:mm');
-      $('#time-select').append(formatted_date);
+      $('#time-select').append('À: ' + "<br/>" + formatted_date);
     });
 
 
