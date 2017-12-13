@@ -25,5 +25,8 @@ $border-radius-small: 2px;
 // Override other variables below!
 $btn-default-color:              white;
 $btn-default-bg:                 $totor-color;
-$btn-default-border:             #ccc !default;
+$btn-default-border:             $totor-color;
 $btn-font-weight: normal;
+
+// Body font color :
+$text-color:   $totor-color-dark;
