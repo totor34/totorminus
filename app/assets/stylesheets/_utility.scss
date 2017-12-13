@@ -85,7 +85,7 @@ html {
 
 .tagline p {
   color: $totor-color;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   margin-bottom: 0;
 
@@ -94,6 +94,24 @@ html {
 .bg-white {
   background-color: white;
 }
+
+// changing placeholder color
+
+input::-webkit-input-placeholder {
+color: $totor-color-light-gray !important;
+}
+
+.color-totor-light-gray {
+  color: $totor-color-light-gray;
+}
+
+.color-totor {
+  color: $totor-color;
+}
+.font-16 {
+  font-size: 16px;
+}
+
 // spacing helpers
 
 .m0{margin: 0px !important;}
@@ -134,6 +152,8 @@ html {
 .ml{margin-left: 20px !important;}
 .mr{margin-right: 20px !important;}
 
+.mb30{margin-bottom: 30px !important;}
+
 .p{padding: 20px !important;}
 .pt{padding-top: 20px !important;}
 .pb{padding-bottom: 20px !important;}
@@ -152,3 +172,14 @@ html {
 .pb\+{padding-bottom: 40px !important;}
 .pl\+{padding-left: 40px !important;}
 .pr\+{padding-right: 40px !important;}
+
+.price{
+  color: #C90456;
+}
+
+.ride p {
+  color: $totor-color;
+  font-size: 18px;
+  margin-bottom: 0;
+
+}
