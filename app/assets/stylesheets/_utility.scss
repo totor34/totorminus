@@ -179,9 +179,25 @@ color: $totor-color-light-gray !important;
   color: #C90456;
 }
 
-.ride p {
+.ride-information-title p {
   color: $totor-color;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 0;
+}
+
+
+.ride-information p {
+  color: $totor-color;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.ride-information-flex  {
+  display: flex;
+  align-items: center;
+}
+
+.step-progress {
+font-size: 14px !important;
 
 }
