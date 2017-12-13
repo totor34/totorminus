@@ -117,7 +117,7 @@ puts "#{User.count} users created"
 puts 'creating end points...'
 
 end_point_1 = EndPoint.create!(
-  address: "2 Rue du Puit de la Muse 13122 Ventabrun",
+  address: "2 Rue du Puits de la Muse 13122 Ventabrun",
   long: 5.293873,
   lat: 43.538265
   )
@@ -208,7 +208,7 @@ rides = [
   {
     train_ref: "6129",
     train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_6,
+    user: user_5,
     passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_7,
@@ -220,7 +220,7 @@ rides = [
   {
     train_ref: "6129",
    train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_5,
+    user: user_6,
     passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,

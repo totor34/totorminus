@@ -19,7 +19,7 @@ html {
 }
 
 .rides-wrapper {
-  background: linear-gradient(200deg, white 2%, #F0E3F1);
+  background: linear-gradient(270deg, #b8dbd9 -45%,#056660 );
   width: 100%;
 }
 
@@ -27,11 +27,11 @@ html {
 
 .traject-card {
   border-radius: 8px;
-  box-shadow: 0.3px 0.3px 0px 0px rgba(0, 0, 255, .2);
+  box-shadow: 0.5px 0.5px 0px 0px rgba(0, 0, 255, .2);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border : 0.1px solid black;
+  // justify-content: space-between;
+  // border : 0.1px solid black;
   padding-top:10px;
   padding-bottom:10px;
   background-color: #F4F4F9;
@@ -45,15 +45,19 @@ html {
   text-decoration: none;
 }
 
-.card-content-sides {
-  display: flex;
+.card-content-center {
+  display: inline-block;
   align-items:center;
+  // margin-left: 3px;
+  p {
+    margin: 2px;
+  }
 }
 
-.card-content-sides p {
+.card-content-center p {
  font-size: 14px;
- color: #0B757D;
 }
+
 
 .image-circle {
   border-radius: 50%;
@@ -70,10 +74,6 @@ html {
 .container-content h2 {
   color: $totor-color;
 }
-
-
-
-
 
 .container-content p {
   font-size: 14px;
@@ -108,8 +108,29 @@ color: $totor-color-light-gray !important;
 .color-totor {
   color: $totor-color;
 }
+
+.color-totor-dark {
+  color: #214142;
+}
+
 .font-16 {
   font-size: 16px;
+}
+
+.mt-text-color {
+  color: white;
+}
+
+.price-label {
+ // background-color: #C90456;
+ background-color: $totor-color;
+ color: white;
+ background-color-opacity: 0.5;
+ border-radius:10px;
+ p {
+    margin: 2px;
+    font-size: 15px;
+  }
 }
 
 // spacing helpers
