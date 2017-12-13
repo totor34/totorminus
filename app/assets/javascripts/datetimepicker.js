@@ -13,7 +13,7 @@ $(function () {
 
 
 $( document ).ready(function() {
-  let lastFieldClicked;
+  var lastFieldClicked;
 
   $('.datepicker-days').hide();
   $('.timepicker').hide();
