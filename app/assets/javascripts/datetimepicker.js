@@ -6,9 +6,8 @@ $(function () {
   $('#datetimepicker12').on('dp.change', function(event) {
       // console.log(moment(event.date).format('MM/DD/YYYY h:mm a'));
       // console.log(event.date.format('MM/DD/YYYY h:mm a'));
-      var formatted_date = event.date.format('YYYY-MM-DD hh:mm');
+      var formatted_date = event.date.format('YYYY-MM-DD HH:mm');
       $('#hdp').val(formatted_date);
-
     });
 });
 
