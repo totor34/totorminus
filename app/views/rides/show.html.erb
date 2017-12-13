@@ -9,7 +9,7 @@
         <% end %>
       </div>
       <div class="col-xs-9">
-        <div class="card-content-sides">
+        <div class="ride">
           <p> Trajet de <%= @ride.user.first_name %>
          <br> Arrivant à : <%= @ride.start_point.station %>
           <br> Le  <%= @ride.train_arrival_at.strftime(" %d %b %Y") %> à <%= @ride.train_arrival_at.strftime(" %Hh%M")%> </p>
@@ -46,7 +46,11 @@
       ["7 passagers", 7]
     ],
     selected: choose_passenger_value %>
-    <%= f.button :submit, "Réserver ce trajet", class: "btn btn-default col-xs-12 soft-angle height-form-60  mb\+\+ pd" %>
+    <%= f.button :submit, "Réserver ce trajet", class: "btn btn-default col-xs-12 soft-angle height-form-60  mb pd" %>
+
+    <%= link_to "Revenir à la liste de trajets", rides_path(request.query_parameters), class: "btn btn-default col-xs-12 soft-angle height-form-60  mb++ pd" %>
+
+
   <% end %>
 
 
