@@ -1,14 +1,14 @@
 <div class="container">
-  <h2><%= t(".title", resource: resource_class.model_name.human) %></h2>
+  <h2><%= t(".title_user", resource: resource_class.model_name.human) %></h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :first_name, class:"soft-angle"  %>
-      <%= f.input :last_name, class:"soft-angle" %>
-      <%= f.input :sex, collection: ["femme", "homme"] %>
-      <%= f.input :birth_date, html5: true, class:"soft-angle" %>
+      <%= f.input :first_name, class:"soft-angle", label: t(".first_name")%>
+      <%= f.input :last_name, class:"soft-angle", label: t(".last_name") %>
+      <%= f.input :sex, collection: ["femme", "homme"], label: t(".sexe")%>
+      <%= f.input :birth_date, html5: true, class:"soft-angle", label: t(".birth_date")%>
       <%= f.input :email, required: true, autofocus: true, class:"soft-angle" %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
