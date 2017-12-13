@@ -101,6 +101,12 @@ input::-webkit-input-placeholder {
 color: $totor-color-light-gray !important;
 }
 
+// test to change font color in form to modify here the bootstrap variable for dropdown
+// needs to be above the color-totor-light-gray to be displayed correctly with JS
+.form-control {
+  color: $totor-color-dark;
+}
+
 .color-totor-light-gray {
   color: $totor-color-light-gray;
 }
@@ -110,12 +116,13 @@ color: $totor-color-light-gray !important;
 }
 
 .color-totor-dark {
-  color: #214142;
+  color: $totor-color-dark;
 }
 
 .font-16 {
   font-size: 16px;
 }
+
 
 .mt-text-color {
   color: white;
@@ -132,6 +139,19 @@ color: $totor-color-light-gray !important;
     font-size: 15px;
   }
 }
+
+
+#date-select {
+  display: flex;
+  align-items: center;
+}
+
+#time-select {
+  display: flex;
+  align-items: center;
+}
+
+
 
 // spacing helpers
 
@@ -198,9 +218,25 @@ color: $totor-color-light-gray !important;
   color: #C90456;
 }
 
-.ride p {
+.ride-information-title p {
   color: $totor-color;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 0;
+}
+
+
+.ride-information p {
+  color: $totor-color;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.ride-information-flex  {
+  display: flex;
+  align-items: center;
+}
+
+.step-progress {
+font-size: 14px !important;
 
 }
