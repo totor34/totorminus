@@ -1,30 +1,38 @@
 <div class="container">
   <div class= "row">
-    <div class="col-xs-6 pt+ pb+ ">
-    <% if @ride.user.photo? %>
-      <%= cl_image_tag @ride.user.photo.path, width: 50, height: 50, crop: :fill,class: 'image-circle', "data-toggle" => "dropdown" %>
-      <% else %>
-      <%= image_tag 'default_avatar_pic.svg', width: 50, height: 50, crop: :fill, class: 'image-circle', "data-toggle" => "dropdown" %>
-      <% end %>
-      <%= @ride.user.first_name %>
+    <div class="col-xs-12 pt pb ">
+      <div class="col-xs-3">
+      <% if @ride.user.photo? %>
+        <%= cl_image_tag @ride.user.photo.path, width: 50, height: 50, crop: :fill,class: 'image-circle', "data-toggle" => "dropdown" %>
+        <% else %>
+        <%= image_tag 'default_avatar_pic.svg', width: 50, height: 50, crop: :fill, class: 'image-circle', "data-toggle" => "dropdown" %>
+        <% end %>
+      </div>
+      <div class="col-xs-9">
+        <div class="ride">
+          <p> Trajet de <%= @ride.user.first_name %>
+         <br> Arrivant à : <%= @ride.start_point.station %>
+          <br> Le  <%= @ride.train_arrival_at.strftime(" %d %b %Y") %> à <%= @ride.train_arrival_at.strftime(" %Hh%M")%> </p>
+        </div>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="col-xs-8 pt+ pb+ ">
+        <%= render 'stepprogress' %>
+      </div>
+
+      <div class="col-xs-4 pt+ pb+ ">
+        <div class="price">
+        <h5 class="mb0"><%= @ride.price %> €</h5> <p> / pers.</p>
+        </div>
+      </div>
     </div>
   </div>
-  <div class= "row">
-    <div class="col-xs-6 pt+ pb+ ">
-      <%= render 'stepprogress' %>
-    </div>
-
-    <div class="col-xs-6 pt+ pb+ ">
-      <%= @ride.price %> € / pers.
-    </div>
-
-  </div>
-</div>
 
   <%= render 'googlemap' %>
 
 <div>
-  <%= simple_form_for [@ride, @booking] , wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+  <%= simple_form_for [@ride, @booking] , wrapper: :inline_form, html: { class: 'form-inline ol-xs-12  height-form-60 m' } do |f| %>
         <%# f.error_notification %>
    <!--  <%= f.input :passenger_number, placeholder: "Nbre de passagers", input_html: {value: choose_passenger_value} %> -->
     <%= f.input :passenger_number,
@@ -38,9 +46,12 @@
       ["7 passagers", 7]
     ],
     selected: choose_passenger_value %>
-    <%= f.button :submit, "Réserver ce trajet", class: 'soft-angle' %>
-  <% end %>
+    <%= f.button :submit, "Réserver ce trajet", class: "btn btn-default col-xs-12 soft-angle height-form-60  mb pd" %>
 
+    <%= link_to "Revenir à la liste de trajets", rides_path(request.query_parameters), class: "btn btn-default col-xs-12 soft-angle height-form-60  mb++ pd" %>
+
+
+  <% end %>
 
 
 
