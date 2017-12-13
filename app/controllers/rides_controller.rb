@@ -11,8 +11,6 @@ class RidesController < ApplicationController
     passenger_number = @search_params[:passenger_number].to_i
 
     matching_train = @search_params[:train_ref]
-
-
     filters = {
       start_points: { station: @search_params[:start_point]},
       passengers_allowed: passenger_number..10
@@ -21,31 +19,18 @@ class RidesController < ApplicationController
     if params[:train_arrival_at].present?
 
       arrival_at = params[:train_arrival_at].to_datetime
-
       filters[:train_arrival_at] = arrival_at..arrival_at.tomorrow.at_midnight
-
     end
 
-    @rides_same_train = Ride.where(train_ref: matching_train)
-    @rides_not_same_train =  Ride.joins(:start_point).where(filters)\
-      .where.not(train_ref: matching_train).order(:train_arrival_at)
+    rides = Ride.joins(:start_point).where(filters).order(:train_arrival_at)
+
+    @rides_same_train = rides.select do |ride|
+      ride.train_ref == matching_train
+    end
+
+    @rides_not_same_train = rides - @rides_same_train
 
   end
-
-    # @matching_rides = @rides.select do |ride|
-    #   ride.start_point.station == @search_params[:start_point] \
-    #     && ride.train_arrival_date == @search_params[:train_arrival_date].to_date \
-    #     && ride.train_arrival_time.hour >= search_arrival_time \
-    #     && ride.passengers_allowed >= search_passenger_number
-    # end
-
-
-    #  @matching_train = @rides.select do |ride|
-    #   ride.start_point.station == @search_params[:start_point] \
-    #     &&
-    # end
-
-
 
         # On filtre les rides dont :
         # le start point et la gare d'arrivée matchent
@@ -61,9 +46,6 @@ class RidesController < ApplicationController
               # du formulaire
               # return ces rides en fonction par distance croissante
               # entre (destination final form et destination final ride)
-
-
-
 
   def show
 
@@ -100,7 +82,7 @@ class RidesController < ApplicationController
 
   def ride_params
     params.require(:ride).permit(
-      :train_ref, :train_arrival_time, :train_arrival_date, :user_id, :passengers_allowed, :start_point_id, :end_point_id,
+      :train_ref, :train_arrival_at, :user_id, :passengers_allowed, :start_point_id, :end_point_id,
       :description, :start_date, :car_model, :car_brand
     )
   end

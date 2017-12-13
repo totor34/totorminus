@@ -20,25 +20,25 @@ User.destroy_all
 puts 'creating users...'
 
 user_1 = User.create!(
-  first_name:"Mathis",
-  last_name:"Clamens",
+  first_name:"Mathieu",
+  last_name:"Bonfils",
   password:"password",
-  email:"testm@test.fr",
+  email:"testmat@test.fr",
   sex:"homme",
   birth_date: Date.parse("23/07/1992"),
   phone_number:"0111111111",
-  photo_url: "http://kitt.lewagon.com/placeholder/users/mathisclm"
+  photo_url: "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAA2DAAAAJDc5N2EzZDc1LTdlMmMtNDc0MS05NTlmLTk3NzBjZjIwODg2YQ.jpg"
   )
 
 user_2 = User.create!(
-  first_name:"Victor",
-  last_name:"Duperret",
+  first_name:"Omar",
+  last_name:"Sy",
   password:"password",
   email:"testv@test.fr",
   sex:"homme",
   birth_date: Date.parse("02/02/1982"),
   phone_number:"0222222222",
-  photo_url: "http://kitt.lewagon.com/placeholder/users/totor34"
+  photo_url: "http://rashtag.fr/wp-content/uploads/2016/02/omar-sy.jpg"
 
   )
 
@@ -57,7 +57,7 @@ user_4 = User.create!(
   first_name:"Sami",
   last_name:"Naceri",
   password:"password",
-  email:"testj@test.fr",
+  email:"tests@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1953"),
   phone_number:"0444444",
@@ -95,6 +95,17 @@ user_7 = User.create!(
   birth_date: Date.parse("03/03/1990"),
   phone_number:"0444444",
   photo_url: "http://i.f1g.fr/media/ext/1900x1900/madame.lefigaro.fr/sites/default/files/img/2017/03/le-parcours-capillaire-de-scarlett-johansson-photo-14.jpg"
+  )
+
+user_8 = User.create!(
+  first_name:"Mathis",
+  last_name:"Clamens",
+  password:"password",
+  email:"testm@test.fr",
+  sex:"homme",
+  birth_date: Date.parse("23/07/1992"),
+  phone_number:"0111111111",
+  photo_url: "http://kitt.lewagon.com/placeholder/users/mathisclm"
   )
 puts "#{User.count} users created"
 
@@ -158,8 +169,8 @@ puts 'creating start points...'
 
 start_point_1 = StartPoint.create!(
   station: "Aix-en-Provence TGV",
-  long: 5.380316,
-  lat: 43.302852
+  long: 5.317436,
+  lat: 43.456249
   )
 
 start_point_2 = StartPoint.create!(
@@ -196,11 +207,11 @@ rides = [
 
   {
     train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 15, 19, 2),
-    user: user_2,
+    train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
+    user: user_6,
     passengers_allowed: 3,
     start_point: start_point_1,
-    end_point: end_point_2,
+    end_point: end_point_7,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
     price_cents: 700
@@ -208,8 +219,8 @@ rides = [
 
   {
     train_ref: "6129",
-   train_arrival_at: DateTime.new(2017, 12, 15, 19, 2),
-    user: user_7,
+   train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
+    user: user_5,
     passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,
@@ -220,7 +231,7 @@ rides = [
 
     {
     train_ref: "6129",
-    train_arrival_at: DateTime.new(2017, 12, 15, 19, 2),
+    train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
     user: user_4,
     passengers_allowed: 4,
     start_point: start_point_1,
@@ -233,8 +244,8 @@ rides = [
 
       {
     train_ref: "6130",
-    train_arrival_at: DateTime.new(2017, 12, 15, 20, 23),
-    user: user_5,
+    train_arrival_at: DateTime.new(2017, 12, 15, 21, 23),
+    user: user_7,
     passengers_allowed: 4,
     start_point: start_point_1,
     end_point: end_point_5,
@@ -246,8 +257,8 @@ rides = [
 
      {
     train_ref: "6130",
-    train_arrival_at: DateTime.new(2017, 12, 15, 20, 23),
-    user: user_6,
+    train_arrival_at: DateTime.new(2017, 12, 15, 21, 23),
+    user: user_2,
     passengers_allowed: 4,
     start_point: start_point_1,
     end_point: end_point_6,
@@ -274,7 +285,7 @@ rides = [
 
 # train Aix-en-Provence TGV le 18
  {
-    train_ref: "6128",
+    train_ref: "6132",
     train_arrival_at: DateTime.new(2017, 12, 18, 11, 00),
     user: user_2,
     passengers_allowed: 1,
@@ -286,7 +297,7 @@ rides = [
    },
 
  {
-    train_ref: "6128",
+    train_ref: "61233",
     train_arrival_at: DateTime.new(2017, 12, 17, 07, 00),
     user: user_1,
     passengers_allowed: 2,
@@ -298,7 +309,7 @@ rides = [
    },
 
    {
-    train_ref: "6129",
+    train_ref: "6134",
     train_arrival_at: DateTime.new(2017, 12, 17, 20, 30),
     user: user_1,
     passengers_allowed: 2,
@@ -311,7 +322,7 @@ rides = [
 
 
     {
-    train_ref: "6129",
+    train_ref: "6135",
     train_arrival_at: DateTime.new(2017, 12, 17, 20, 00),
     user: user_1,
     passengers_allowed: 3,
@@ -323,7 +334,7 @@ rides = [
    },
 
     {
-    train_ref: "6129",
+    train_ref: "6136",
     train_arrival_at: DateTime.new(2017, 12, 17, 9, 00),
     user: user_1,
     passengers_allowed: 3,

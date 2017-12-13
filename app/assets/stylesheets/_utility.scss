@@ -19,13 +19,15 @@ html {
 }
 
 .rides-wrapper {
-  background: linear-gradient(270deg, white 2%, #F0E3F1);
+  background: linear-gradient(200deg, white 2%, #F0E3F1);
   width: 100%;
 }
 
+// FCAB64
+
 .traject-card {
   border-radius: 8px;
-  box-shadow: 1px 1px 0px 0px rgba(0, 0, 255, .2);
+  box-shadow: 0.3px 0.3px 0px 0px rgba(0, 0, 255, .2);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,7 +48,6 @@ html {
 .card-content-sides {
   display: flex;
   align-items:center;
-
 }
 
 .card-content-sides p {
@@ -69,6 +70,12 @@ html {
 .container-content h2 {
   color: $totor-color;
 }
+
+.text-color {
+  color: #0B757D;
+}
+
+
 
 .container-content p {
   font-size: 14px;
