@@ -51,11 +51,11 @@
       ["7 passagers", 7]
     ],
     selected: choose_passenger_value,
-    input_html: { class: "form-control soft-angle height-form color-totor-light-gray font-16 mt" } %>
+    input_html: { class: "form-control soft-angle color-totor-light-gray font-16 mt" } %>
 
-    <%= f.button :submit, "Réserver ce trajet", class: "btn btn-default col-xs-12 soft-angle height-form  mb pd" %>
+    <%= f.button :submit, "Réserver ce trajet", class: "btn btn-default col-xs-12 soft-angle  mb pd" %>
   <% end %>
-  <%= link_to "Revenir à la liste de trajets", rides_path(request.query_parameters), class: "btn btn-default col-xs-12 soft-angle height-form mb++ pd" %>
+  <%= link_to "Revenir à la liste de trajets", rides_path(request.query_parameters), class: "btn btn-default col-xs-12 soft-angle mb++ pd" %>
 
 
 
