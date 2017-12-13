@@ -103,6 +103,12 @@ input::-webkit-input-placeholder {
 color: $totor-color-light-gray !important;
 }
 
+// test to change font color in form to modify here the bootstrap variable for dropdown
+// needs to be above the color-totor-light-gray to be displayed correctly with JS
+.form-control {
+  color: $totor-color-dark;
+}
+
 .color-totor-light-gray {
   color: $totor-color-light-gray;
 }
@@ -110,9 +116,25 @@ color: $totor-color-light-gray !important;
 .color-totor {
   color: $totor-color;
 }
+
+.color-totor-dark {
+  color: $totor-color-dark;
+}
+
 .font-16 {
   font-size: 16px;
 }
+
+#date-select {
+  display: flex;
+  align-items: center;
+}
+
+#time-select {
+  display: flex;
+  align-items: center;
+}
+
 
 // spacing helpers
 
