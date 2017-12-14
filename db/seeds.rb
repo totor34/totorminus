@@ -128,7 +128,7 @@ puts "#{User.count} users created"
 puts 'creating end points...'
 
 end_point_1 = EndPoint.create!(
-  address: "2 Rue du Puit de la Muse 13122 Ventabrun",
+  address: "2 Rue du Puits de la Muse 13122 Ventabrun",
   long: 5.293873,
   lat: 43.538265
   )
