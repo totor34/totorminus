@@ -1,36 +1,35 @@
 <div class="container container-content">
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <div class="text-center">
+    <div class="col-xs-12">
+
         <% if @booking.state == "paid" %>
-        <h1>Réservation confirmée!</h1>
+        <h3 class="mb mt-- text-center">Réservation confirmée!</h3>
         <%else%>
-        <h1>Réservation en cours</h1>
+        <h2 class="mb text-center">Confirmation de reservation</h2>
         <%end%>
-        <p>Départ: <%= @booking.start_point.station %></p>
-        <p>Arrivée: <%= @booking.end_point.address %></p>
-        <p>Conducteur : <%= @booking.ride.user.first_name %> </p>
-        <p>Arrivée de son train : le <%= @booking.ride.train_arrival_at.strftime(" %d %b %Y") %> à <%= @booking.ride.train_arrival_at.strftime("%Hh%M")  %></p>
-        <p>Places réservées : <%= @booking.passenger_number %></p>
-        <p>Prix total : <%= humanized_money_with_symbol @booking.calculate_amount %> </p>
-      </div>
+        <div class="traject-confirmation">
+          <p><strong class=" text-left color-totor-dark  ">Départ :</strong> <%= @booking.start_point.station %></p>
+
+          <p><strong class=" text-left color-totor-dark ">Arrivée :</strong> <%= @booking.end_point.address %></p>
+          <p><strong class=" text-left color-totor-dark ">Conducteur :</strong> <%= @booking.ride.user.first_name %> </p>
+          <p><strong class=" text-left color-totor-dark ">Arrivée de son train :</strong> <%= @booking.ride.train_arrival_at.strftime(" %d %b %Y") %> à <%= @booking.ride.train_arrival_at.strftime("%Hh%M")  %></p>
+          <p><strong class=" text-left color-totor-dark ">Places réservées :</strong> <%= @booking.passenger_number %></p>
+        </div>
+
     </div>
   </div>
-  <hr>
-
-  <hr>
 <% if @booking.state == "paid" %>
-
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <div class="text-center bg-white soft-angle p- text-14">
-        <%= @booking.ride.description %>
+    <div class="col-xs-12 ">
+      <div class="text-left traject-confirmation mt">
+        <p>"<%= @booking.ride.description %>"</p>
+        <p>Pour plus d'infos, appelez<strong> <%= @booking.ride.user.first_name %></strong> au <%= @booking.ride.user.phone_number %></p>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-4">
+    <div class="col-xs-10 col-xs-offset-2">
       <div class="car-with-passengers text-center">
         <div class="car-passenger">
 
@@ -46,18 +45,25 @@
       </div>
     </div>
   </div>
+  <div class="row">
+
+    <div class="text-center col-xs-10 col-xs-offset-1">
+      <h3> A très bientôt sur </h3>
+      <%= image_tag "logo.png", height: 50, class: "img-responsive" %>
+    </div>
+  </div>
 <% end %>
 
 <% if @booking.state == "pending" %>
 
 <%= form_tag booking_payments_path(@booking) do %>
-  <article class="text-center">
+  <article class="text-center mt+ ml-- ">
     <label class="amount">
       <span> Payer : <%= humanized_money_with_symbol(@booking.calculate_amount) %></span>
     </label>
   </article>
 
- <div class="text-center">
+ <div class="text-center mt-- ml--">
     <%= form_tag bookings_path do %>
       <%= hidden_field_tag 'booking_id', @booking.id %>
 
@@ -72,15 +78,9 @@
         data-currency="<%= @booking.amount.currency %>"></script>
 
     <% end %>
-    <% end %>
-
-    <%else%>
-    <div class="text-center">
-      <h1> A très bientôt sur </h1>
-      <%= image_tag("cover.png") %>
-    </div>
+  </div>
 <% end %>
-
+<% end %>
   </div>
 </div>
 

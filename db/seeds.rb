@@ -82,7 +82,7 @@ user_6 = User.create!(
   email:"testk@test.fr",
   sex:"homme",
   birth_date: Date.parse("03/03/1990"),
-  phone_number:"0782228288",
+  phone_number:"0626051993",
   photo_url: "https://avatars1.githubusercontent.com/u/22000551?s=400&v=4"
   )
 

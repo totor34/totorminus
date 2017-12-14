@@ -81,19 +81,22 @@
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-<script>
-  $('form').submit( function(event) {
-    var formId = this.id,
-        form = this;
-    $(this).addClass("hidden");
-    $(".loading").removeClass("hidden").addClass("show");
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-12">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script>
+      $('form').submit( function(event) {
+        var formId = this.id,
+            form = this;
+        $(this).addClass("hidden");
+        $(".loading").removeClass("hidden").addClass("show");
 
-    event.preventDefault();
+        event.preventDefault();
 
-    setTimeout( function () {
-        form.submit();
-    }, 1000);
-});
-</script>
-
+        setTimeout( function () {
+            form.submit();
+        }, 4000);
+    });
+    </script>
+  </div>
+</div>
