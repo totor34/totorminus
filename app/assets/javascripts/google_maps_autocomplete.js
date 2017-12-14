@@ -1,18 +1,18 @@
 function onPlaceChanged() {
   var place = this.getPlace();
   var components = getAddressComponents(place);
+  // console.log(components);
+  var destAddress = document.getElementById('dest');
+  destAddress.blur();
+  destAddress.value = components.city;
 
-  var flatAddress = document.getElementById('flat_address');
-  flatAddress.blur();
-  flatAddress.value = components.address;
+  // document.getElementById('flat_zip_code').value = components.zip_code;
+  // document.getElementById('flat_city').value = components.city;
 
-  document.getElementById('flat_zip_code').value = components.zip_code;
-  document.getElementById('flat_city').value = components.city;
-
-  if (components.country_code) {
-    var selector = '#flat_country option[value="' + components.country_code + '"]';
-    document.querySelector(selector).selected = true;
-  }
+  // if (components.country_code) {
+  //   var selector = '#flat_country option[value="' + components.country_code + '"]';
+  //   document.querySelector(selector).selected = true;
+  // }
 }
 
 function getAddressComponents(place) {
@@ -58,12 +58,12 @@ function getAddressComponents(place) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  var flatAddress = document.getElementById('flat_address');
+  var destAddress = document.getElementById('dest');
 
-  if (flatAddress) {
-    var autocomplete = new google.maps.places.Autocomplete(flatAddress, { types: ['geocode'] });
+  if (destAddress) {
+    var autocomplete = new google.maps.places.Autocomplete(destAddress, { types: ['geocode'], componentRestrictions: {country: "fr"}});
     google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
-    google.maps.event.addDomListener(flatAddress, 'keydown', function(e) {
+    google.maps.event.addDomListener(destAddress, 'keydown', function(e) {
       if (e.key === "Enter") {
         e.preventDefault(); // Do not submit the form on Enter.
       }
