@@ -26,7 +26,7 @@ user_1 = User.create!(
   email:"testmat@test.fr",
   sex:"homme",
   birth_date: Date.parse("23/07/1992"),
-  phone_number:"0111111111",
+  phone_number:"0699115900",
   photo_url: "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAA2DAAAAJDc5N2EzZDc1LTdlMmMtNDc0MS05NTlmLTk3NzBjZjIwODg2YQ.jpg"
   )
 
@@ -37,19 +37,19 @@ user_2 = User.create!(
   email:"testv@test.fr",
   sex:"homme",
   birth_date: Date.parse("02/02/1982"),
-  phone_number:"0222222222",
+  phone_number:"0622382238",
   photo_url: "http://rashtag.fr/wp-content/uploads/2016/02/omar-sy.jpg"
 
   )
 
 user_3 = User.create!(
   first_name:"Sebastien",
-  last_name:"saunier",
+  last_name:"Saunier",
   password:"password",
   email:"tests@test.fr",
   sex:"homme",
   birth_date: Date.parse("03/03/1983"),
-  phone_number:"0333333333",
+  phone_number:"0725345676",
   photo_url: "http://kitt.lewagon.com/placeholder/users/ssaunier"
   )
 
@@ -60,7 +60,7 @@ user_4 = User.create!(
   email:"testsa@test.fr",
   sex:"homme",
   birth_date: Date.parse("03/03/1953"),
-  phone_number:"0444444",
+  phone_number:"0618283947",
   photo_url: "http://www.insolitemag.com/wp-content/uploads/2017/08/343175.1.jpg"
   )
 
@@ -71,7 +71,7 @@ user_5 = User.create!(
   email:"testcl@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1990"),
-  phone_number:"067891011",
+  phone_number:"0606071228",
   photo_url: "https://avatars2.githubusercontent.com/u/32484761?v=4"
   )
 
@@ -93,7 +93,7 @@ user_7 = User.create!(
   email:"testa@test.fr",
   sex:"homme",
   birth_date: Date.parse("03/03/1990"),
-  phone_number:"0444444",
+  phone_number:"06 77 99 11 00",
   photo_url: "http://i.f1g.fr/media/ext/1900x1900/madame.lefigaro.fr/sites/default/files/img/2017/03/le-parcours-capillaire-de-scarlett-johansson-photo-14.jpg"
   )
 
@@ -104,7 +104,7 @@ user_8 = User.create!(
   email:"testm@test.fr",
   sex:"homme",
   birth_date: Date.parse("23/07/1992"),
-  phone_number:"0111111111",
+  phone_number:"0713141516",
   photo_url: "http://kitt.lewagon.com/placeholder/users/mathisclm"
   )
 
@@ -115,8 +115,8 @@ user_9 = User.create!(
   email:"testc@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1983"),
-  phone_number:"0333333333"
-)
+  phone_number:"0678545353",
+  )
 puts "#{User.count} users created"
 
 # def seed_photo(file_name)
@@ -210,46 +210,46 @@ rides = [
     passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_3,
-    description: "Rdv devant le Monop' dans la gare",
+    description: "Rendez-vous devant le Tabac de la gare",
     car_model: "Mazerati",
-    price_cents: 1000
+    price_cents: 350
   },
 
   {
     train_ref: "6129",
     train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_6,
+    user: user_5,
     passengers_allowed: 3,
     start_point: start_point_1,
-    end_point: end_point_7,
-    description: "Rdv devant le magasin de foot de l'OM, je porterais une casquette Bit Coin. À toute ! ",
+    end_point: end_point_5,
+    description: "Rdv devant chez Paul, j'en profiterai pour prendre un Sandwich !",
     car_model: "206",
-    price_cents: 700
+    price_cents: 300
    },
 
   {
     train_ref: "6129",
    train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_5,
+    user: user_4,
     passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,
-    description: "On se retrouve le Monoprix, j'ai une valise verte ! ",
+    description: "Rendez-vous au tabac (attention voiture non fumeur)",
     car_model: "206",
-    price_cents: 700
+    price_cents: 400
    },
 
     {
     train_ref: "6129",
     train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_4,
+    user: user_1,
     passengers_allowed: 4,
-    start_point: start_point_1,
+    start_point: start_point_2,
     end_point: end_point_4,
     description: "On se rejoint 5 min après l'arrivée du train,
     voila mon portable : 0612345678  ",
     car_model: "Peugeot 406",
-    price_cents: 800
+    price_cents: 300
    },
 
       {
@@ -262,7 +262,7 @@ rides = [
     description: "On se rejoint 5 min après l'arrivée du train,
     voila mon portable : 0612345678  ",
     car_model: "206",
-    price_cents: 800
+    price_cents: 400
    },
 
      {
@@ -271,11 +271,11 @@ rides = [
     user: user_2,
     passengers_allowed: 4,
     start_point: start_point_1,
-    end_point: end_point_6,
+    end_point: end_point_4,
     description: "On se rejoint 5 min après l'arrivée du train,
     voila mon portable : 0612345678  ",
     car_model: "206",
-    price_cents: 800
+    price_cents: 500
    },
 
 
@@ -285,11 +285,11 @@ rides = [
     user: user_3,
     passengers_allowed: 4,
     start_point: start_point_1,
-    end_point: end_point_7,
+    end_point: end_point_2,
     description: "On se rejoint 5 min après l'arrivée du train,
     voila mon portable : 0612345678  ",
     car_model: "206",
-    price_cents: 800
+    price_cents: 350
    },
 
 
@@ -307,7 +307,7 @@ rides = [
    },
 
  {
-    train_ref: "61233",
+    train_ref: "6123",
     train_arrival_at: DateTime.new(2017, 12, 17, 07, 00),
     user: user_1,
     passengers_allowed: 2,
@@ -315,7 +315,7 @@ rides = [
     end_point: end_point_7,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
-    price_cents: 500
+    price_cents: 300
    },
 
    {
@@ -327,7 +327,7 @@ rides = [
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
-    price_cents: 500
+    price_cents: 300
    },
 
 
@@ -340,7 +340,7 @@ rides = [
     end_point: end_point_1,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
-    price_cents: 500
+    price_cents: 300
    },
 
     {
@@ -352,7 +352,7 @@ rides = [
     end_point: end_point_7,
     description: "Rdv devant le Monop' dans la gare",
     car_model: "206",
-    price_cents: 500
+    price_cents: 380
    },
 
   ]
