@@ -57,7 +57,7 @@ user_4 = User.create!(
   first_name:"Sami",
   last_name:"Naceri",
   password:"password",
-  email:"tests@test.fr",
+  email:"testsa@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1953"),
   phone_number:"0444444",
@@ -71,7 +71,7 @@ user_5 = User.create!(
   email:"testcl@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1990"),
-  phone_number:"0444444",
+  phone_number:"067891011",
   photo_url: "https://avatars2.githubusercontent.com/u/32484761?v=4"
   )
 
@@ -82,7 +82,7 @@ user_6 = User.create!(
   email:"testl@test.fr",
   sex:"femme",
   birth_date: Date.parse("03/03/1990"),
-  phone_number:"0444444",
+  phone_number:"0626051993",
   photo_url: "https://avatars1.githubusercontent.com/u/22000551?s=400&v=4"
   )
 
@@ -116,8 +116,8 @@ user_9 = User.create!(
   sex:"femme",
   birth_date: Date.parse("03/03/1983"),
   phone_number:"0333333333",
-  photo_url: "http://kitt.lewagon.com/placeholder/users/cecilevarin"
-  )
+  photo_url: "http://kitt.lewagon.com/placeholder/users/mathisclm"
+ )
 puts "#{User.count} users created"
 
 # def seed_photo(file_name)
@@ -223,7 +223,7 @@ rides = [
     passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_7,
-    description: "Rdv devant le Monop' dans la gare",
+    description: "Rdv devant le magasin de foot de l'OM, je porterais une casquette Bit Coin. À toute ! ",
     car_model: "206",
     price_cents: 700
    },
@@ -235,7 +235,7 @@ rides = [
     passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,
-    description: "Rdv devant le Monop' dans la gare",
+    description: "On se retrouve le Monoprix, j'ai une valise verte ! ",
     car_model: "206",
     price_cents: 700
    },
