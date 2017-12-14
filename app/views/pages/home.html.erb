@@ -47,7 +47,7 @@
     <div class="form-group mb30">
       <div class="row">
         <div class="col-xs-12">
-          <input type="text" name="search[end_point]" class="form-control soft-angle height-form-60 font-16" id="dest" placeholder="Destination finale" required value= "<%= set_params(:end_point) %>">
+          <input type="text" name="search[end_point]" class="form-control soft-angle height-form-60 font-16" id="dest" placeholder="Destination" required value= "<%= set_params(:end_point) %>">
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@
               ["7 passagers", 7]
             ],
             {selected: choose_passenger_value},
-            {class: "form-control soft-angle height-form-60 color-totor-light-gray font-16 mt"}
+            {class: "form-control soft-angle height-form-60 color-totor-light-gray font-16"}
              ) %>
           </div>
         </div>
@@ -82,28 +82,24 @@
  <% end %>
 
 
-  <%= image_tag "totorminus.gif", class: "loading hidden" %>
+  <%= image_tag "totorminus.gif", class: "loading hidden gif-center" %>
 
 </div>
 
 
-<div class="row">
-  <div class="col-xs-offset-1 col-xs-12">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script>
-      $('form').submit( function(event) {
-        var formId = this.id,
-            form = this;
-        $(this).addClass("hidden");
-        $(".loading").removeClass("hidden").addClass("show");
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script>
+  $('form').submit( function(event) {
+    var formId = this.id,
+        form = this;
+    $(this).addClass("hidden");
+    $(".loading").removeClass("hidden").addClass("show");
 
-        event.preventDefault();
+    event.preventDefault();
 
-        setTimeout( function () {
-            form.submit();
-        }, 4000);
-    });
-    </script>
-  </div>
-</div>
+    setTimeout( function () {
+        form.submit();
+    }, 4000);
+});
+</script>
 
