@@ -43,14 +43,14 @@ user_2 = User.create!(
   )
 
 user_3 = User.create!(
-  first_name:"Cécile",
-  last_name:"Varin",
+  first_name:"Sebastien",
+  last_name:"saunier",
   password:"password",
-  email:"testc@test.fr",
-  sex:"femme",
+  email:"tests@test.fr",
+  sex:"homme",
   birth_date: Date.parse("03/03/1983"),
   phone_number:"0333333333",
-  photo_url: "http://kitt.lewagon.com/placeholder/users/cecilevarin"
+  photo_url: "http://kitt.lewagon.com/placeholder/users/ssaunier"
   )
 
 user_4 = User.create!(
@@ -107,6 +107,17 @@ user_8 = User.create!(
   phone_number:"0111111111",
   photo_url: "http://kitt.lewagon.com/placeholder/users/mathisclm"
   )
+
+user_9 = User.create!(
+  first_name:"Cecile",
+  last_name:"Varin",
+  password:"password",
+  email:"testc@test.fr",
+  sex:"femme",
+  birth_date: Date.parse("03/03/1983"),
+  phone_number:"0333333333",
+  photo_url: "http://kitt.lewagon.com/placeholder/users/cecilevarin"
+  )
 puts "#{User.count} users created"
 
 # def seed_photo(file_name)
@@ -117,7 +128,7 @@ puts "#{User.count} users created"
 puts 'creating end points...'
 
 end_point_1 = EndPoint.create!(
-  address: "2 Rue du Puits de la Muse 13122 Ventabrun",
+  address: "2 Rue du Puit de la Muse 13122 Ventabrun",
   long: 5.293873,
   lat: 43.538265
   )
@@ -208,7 +219,7 @@ rides = [
   {
     train_ref: "6129",
     train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_5,
+    user: user_6,
     passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_7,
@@ -220,7 +231,7 @@ rides = [
   {
     train_ref: "6129",
    train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_6,
+    user: user_5,
     passengers_allowed: 1,
     start_point: start_point_1,
     end_point: end_point_1,
@@ -364,7 +375,4 @@ puts "#{Booking.count} bookings created"
 puts 'listing the 4700 FR stations... can take a while'
 Rake::Task['db:seed_stations'].invoke
 puts "#{StartPoint.count} stations created"
-
-# Aix en Provence à enlever du csv pour éviter les doublons dans le dropdown. Ligne ci-dessous coupée de trainline-eu_stations.csv
-# 233;Aix-en-Provence TGV;aix-en-provence-tgv;8731901;87319012;43.455237;5.317534;23614;FR;Europe/Paris;f;f;f;t;f;f;FRAIE;AXV;t;AIE;t;8704980;t;;f;;f;;f;;f;AIE;t;8731901;f;;;;f;;f;8700912;t;;f;FRAIE;t;t;;;;;;;;;;;;エクス＝アン＝プロヴァンス;엑상프로방스;;;Экс-ан-Прованс;;;普罗旺斯地区艾克斯
 

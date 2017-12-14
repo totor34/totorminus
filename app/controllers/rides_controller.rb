@@ -10,6 +10,11 @@ class RidesController < ApplicationController
 
     passenger_number = @search_params[:passenger_number].to_i
 
+    if @search_params[:start_point].blank?
+      flash[:alert] = "Veuillez remplir le point de départ !"
+      redirect_to root_path
+    end
+
     matching_train = @search_params[:train_ref]
     filters = {
       start_points: { station: @search_params[:start_point]},

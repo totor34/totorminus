@@ -8,15 +8,15 @@
           <%= image_tag 'default_avatar_pic.svg', width: 50, height: 50, crop: :fill, class: 'image-circle', "data-toggle" => "dropdown" %>
         <% end %>
       </div>
-      <div class= "card-content-center col-xs-offset-1 col-xs-6 color-totor-dark">
+      <div class= "card-content-center col-xs-offset-1 col-xs-6   color-totor-dark">
        <p><%= r.user.first_name %> </p>
        <p> <%= r.end_point.address.split(" ").last %> </p>
       </div>
-      <div class= " price-label col-xs-offset-1 col-xs-3 color-totor-dark">
+      <div class= " price-label col-xs-offset-1 col-xs-3 col-sm-offset-3 col-sm-2 col-md-offset-1 col-md-2 text-center color-totor-dark">
           <p> <%= r.price_cents/100 %>€/</p>
           <p> Pers</></p>
       </div>
     </div>
   <% end %>
 <% end  %>
- </div>
+
