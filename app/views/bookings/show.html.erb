@@ -5,7 +5,7 @@
         <% if @booking.state == "paid" %>
         <h3 class="mb mt-- text-center">Réservation confirmée!</h3>
         <%else%>
-        <h2 class="mb text-center">Confirmation de reservation</h2>
+        <h3 class="mb text-center">Confirmation de réservation</h3>
         <%end%>
         <div class="traject-confirmation">
           <p><strong class=" text-left color-totor-dark  ">Départ :</strong> <%= @booking.start_point.station %></p>
