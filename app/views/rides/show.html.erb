@@ -14,8 +14,8 @@
           <h4>Trajet de <%= @ride.user.first_name %></h4>
           <div class='ride-information'>
 
-          <p>Arrivant à : <%= @ride.start_point.station %>
-          <br> Le  <%= @ride.train_arrival_at.strftime(" %d %b %Y") %> à <%= @ride.train_arrival_at.strftime(" %Hh%M")%> </p>
+          <p> <strong>Arrivée</strong> : <%= @ride.start_point.station %>
+          <br> <strong>Le</strong> : <%= @ride.train_arrival_at.strftime(" %d %b %Y") %> à <%= @ride.train_arrival_at.strftime(" %Hh%M")%> </p>
         </div>
         </div>
       </div>
@@ -35,12 +35,6 @@
           <p> Pers</p>
       </div>
 
-
-      <!-- <div class="col-xs-4 pt+ pb+ ">
-        <div class="price">
-        <h5 class="mb0"><%= @ride.price %> €</h5> <p> / pers.</p>
-        </div>
-      </div> -->
     </div>
   </div>
 
