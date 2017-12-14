@@ -57,8 +57,8 @@ user_4 = User.create!(
   first_name:"Sami",
   last_name:"Naceri",
   password:"password",
-  email:"tests@test.fr",
-  sex:"femme",
+  email:"testsa@test.fr",
+  sex:"homme",
   birth_date: Date.parse("03/03/1953"),
   phone_number:"0444444",
   photo_url: "http://www.insolitemag.com/wp-content/uploads/2017/08/343175.1.jpg"
@@ -79,8 +79,8 @@ user_6 = User.create!(
   first_name:"Killian",
   last_name:"Avocat",
   password:"password",
-  email:"testl@test.fr",
-  sex:"femme",
+  email:"testk@test.fr",
+  sex:"homme",
   birth_date: Date.parse("03/03/1990"),
   phone_number:"0444444",
   photo_url: "https://avatars1.githubusercontent.com/u/22000551?s=400&v=4"
@@ -116,7 +116,6 @@ user_9 = User.create!(
   sex:"femme",
   birth_date: Date.parse("03/03/1983"),
   phone_number:"0333333333",
-  photo_url: "http://kitt.lewagon.com/placeholder/users/cecilevarin"
   )
 puts "#{User.count} users created"
 
