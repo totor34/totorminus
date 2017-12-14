@@ -1,7 +1,8 @@
 $(function () {
   $('#datetimepicker12').datetimepicker({
     inline: true,
-    sideBySide: true
+    sideBySide: true,
+    useCurrent: false
   });
   $('#datetimepicker12').on('dp.change', function(event) {
       // console.log(moment(event.date).format('MM/DD/YYYY h:mm a'));

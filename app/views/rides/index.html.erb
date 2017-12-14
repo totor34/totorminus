@@ -1,7 +1,23 @@
 <div class="container">
   <div class = "row ">
     <div class= "col-xs-12 text-center">
+      <div class= "mt+ mt+ mt+">
+         <% if (@rides_same_train == [] && @rides_not_same_train == []) %>
+
+          <h6> Désolé, aucun trajet n'est disponible
+            <br> à ce moment de la journée
+            <br> pour votre destination</h6>
+
+          <h6> A très bientôt !</h6>
+
+
+          <%= link_to "Revenir à la recherche", root_path, class: "btn btn-default col-xs-12 soft-angle  mt+ mt+ mb++ pd" %>
+        </div>
+      <% else %>
+
       <h3>Trajets disponibles</h3>
+
+      <% end %>
     </div>
   </div>
 </div>

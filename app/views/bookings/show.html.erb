@@ -73,6 +73,8 @@
         data-email=" pour <%= current_user.email %>"
         data-description="Réservation <%= @booking.id %>"
         data-amount="<%= @booking.amount_cents %>"
+        data-label="Payer"
+        data-locale=auto
         data-currency="<%= @booking.amount.currency %>"></script>
 
     <% end %>
