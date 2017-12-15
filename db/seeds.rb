@@ -375,3 +375,13 @@ puts 'listing the 4700 FR stations... can take a while'
 Rake::Task['db:seed_stations'].invoke
 puts "#{StartPoint.count} stations created"
 
+# Stations removed from csv file (please don't erase this comment)
+# Aix-en-Provence TGV (to avoid double with seed file)
+# 3497;Paris-L’Hôpital;paris-lhopital;8771213;87712133;46.911529;4.636941;;FR;Europe/Paris;f;f;f;t;f;f;FRGUQ;;t;;f;8704184;f;;f;;f;;f;;f;;f;;f;;;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;;
+# 1129;Paris Gare du Nord;paris-gare-du-nord;8727103;87271031;48.880185;2.355151;4916;FR;Europe/Paris;f;f;f;f;f;f;FRCCP;PNO_TRANS;f;;f;8703374;f;;f;;f;;f;;f;;f;;f;;;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;;
+# 1188;Paris Gare du Nord 2;paris-gare-du-nord-2;8727401;;;;4916;FR;Europe/Paris;f;f;f;f;f;f;FRCEZ;;t;;f;;f;;f;;f;;f;;f;;f;;f;;;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;;
+# 4922;Paris Gare du Nord;paris-gare-du-nord;8727100;87271007;48.880185;2.355151;4916;FR;Europe/Paris;f;t;f;t;f;f;FRPNO;PNO;t;;f;8700014;f;;f;;f;;f;;f;;f;8727100;f;;;;f;;f;8700015;t;;f;FRPNO;t;t;;;;;;Parigi;;Parijs;Paříž;;Párizs;パリ;파리;Paryż;;Париж;;;巴黎
+# 22584;Paris Gare du Nord Eurostar;paris-gare-du-nord-eurostar;;;48.880697;2.354598;4916;FR;Europe/Paris;f;f;f;f;f;f;;;f;;f;8798014;t;;f;;f;;f;;f;;f;;f;;;;f;;f;;f;;f;;f;f;4922;;;;;;;;;;;;;;;;;;
+# 3389;Paris Gare de Lyon A;paris-gare-de-lyon-a;8768610;;;;4916;FR;Europe/Paris;f;f;f;f;f;f;FRGOO;;f;;f;;f;;f;;f;;f;;f;;f;;f;;;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;;
+# 3390;Paris Gare de Lyon B;paris-gare-de-lyon-b;8768611;87686113;;;4916;FR;Europe/Paris;f;f;f;f;f;f;FRGOP;;f;;f;;f;;f;;f;;f;;f;;f;;f;;;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;;
+# 10312;Paris Gare de Lyon RER;paris-gare-de-lyon-rer;8775858;;48.844605;2.373835;4916;FR;Europe/Paris;f;f;f;f;f;f;FRICS;;f;;f;8704185;f;;f;;f;;f;;f;;f;;f;;;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;;
