@@ -1,11 +1,11 @@
 <div class="container container-content">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-offset-1 col-sm-10">
 
         <% if @booking.state == "paid" %>
-        <h3 class="mb mt-- text-center">Réservation confirmée!</h3>
+        <h3 class="mb mt text-center">Réservation confirmée!</h3>
         <%else%>
-        <h3 class="mb text-center">Confirmation de réservation</h3>
+        <h3 class="mb mt text-center">Récapitulatif de la réservation</h3>
         <%end%>
         <div class="traject-confirmation">
           <p><strong class=" text-left color-totor-dark  ">Départ :</strong> <%= @booking.start_point.station %></p>
@@ -20,7 +20,7 @@
   </div>
 <% if @booking.state == "paid" %>
   <div class="row">
-    <div class="col-xs-12 ">
+    <div class="col-xs-12 col-sm-offset-1 col-sm-10">
       <div class="text-left traject-confirmation mt">
         <p>"<%= @booking.ride.description %>"</p>
         <p>Pour plus d'infos, appelez<strong> <%= @booking.ride.user.first_name %></strong> au <%= @booking.ride.user.phone_number %></p>
@@ -29,7 +29,7 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-2">
+    <div class="col-xs-10 col-xs-offset-4 mt+ mb">
       <div class="car-with-passengers text-center">
         <div class="car-passenger">
 
@@ -59,7 +59,7 @@
 <%= form_tag booking_payments_path(@booking) do %>
   <article class="text-center mt+ ml-- ">
     <label class="amount">
-      <span> Payer : <%= humanized_money_with_symbol(@booking.calculate_amount) %></span>
+      <span> Total : <%= humanized_money_with_symbol(@booking.calculate_amount) %></span>
     </label>
   </article>
 
@@ -67,7 +67,7 @@
     <%= form_tag bookings_path do %>
       <%= hidden_field_tag 'booking_id', @booking.id %>
 
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button " style="min-width: 100px;"
         data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
         data-name="Mon trajet"
         data-email=" pour <%= current_user.email %>"
