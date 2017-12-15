@@ -14,6 +14,8 @@ $(function () {
 
 
 $( document ).ready(function() {
+
+
   var last_field_clicked = '';
 
   $('.datepicker-days').hide();

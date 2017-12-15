@@ -127,7 +127,7 @@ puts "#{User.count} users created"
 puts 'creating end points...'
 
 end_point_1 = EndPoint.create!(
-  address: "2 Rue du Puits de la Muse 13122 Ventabrun",
+  address: "2 Rue du Puits de la Muse 13122 Ventabren",
   long: 5.293873,
   lat: 43.538265
   )
@@ -206,7 +206,7 @@ rides = [
   {
     train_ref: "6128",
     train_arrival_at: DateTime.new(2017, 12, 15, 8, 57),
-    user: user_1,
+    user: user_1, #mat bonfils
     passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_3,
@@ -218,7 +218,7 @@ rides = [
   {
     train_ref: "6129",
     train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_5,
+    user: user_5, #chloe
     passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_5,
@@ -230,8 +230,8 @@ rides = [
   {
     train_ref: "6129",
    train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_4,
-    passengers_allowed: 1,
+    user: user_4, #sami naceri
+    passengers_allowed: 3,
     start_point: start_point_1,
     end_point: end_point_1,
     description: "Rendez-vous au tabac (attention voiture non fumeur)",
@@ -242,7 +242,7 @@ rides = [
     {
     train_ref: "6129",
     train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_1,
+    user: user_6, #killian
     passengers_allowed: 4,
     start_point: start_point_2,
     end_point: end_point_4,
@@ -255,7 +255,7 @@ rides = [
       {
     train_ref: "6130",
     train_arrival_at: DateTime.new(2017, 12, 15, 21, 23),
-    user: user_7,
+    user: user_7, #scarlett
     passengers_allowed: 4,
     start_point: start_point_1,
     end_point: end_point_5,
@@ -268,7 +268,7 @@ rides = [
      {
     train_ref: "6130",
     train_arrival_at: DateTime.new(2017, 12, 15, 21, 23),
-    user: user_2,
+    user: user_2, #omar
     passengers_allowed: 4,
     start_point: start_point_1,
     end_point: end_point_4,
@@ -282,7 +282,7 @@ rides = [
       {
     train_ref: "6131",
     train_arrival_at: DateTime.new(2017, 12, 15, 22, 45),
-    user: user_3,
+    user: user_3, #seb s
     passengers_allowed: 4,
     start_point: start_point_1,
     end_point: end_point_2,
