@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(270deg, white 2%, #b8dbd9);
+  background: linear-gradient(270deg, white -60%, #b8dbd9);
+  // background: linear-gradient(270deg, #b8dbd9 2%, #00aeba);
   height: 100%;
 }
 
@@ -218,6 +219,7 @@ color: $totor-color-light-gray !important;
 .mr{margin-right: 20px !important;}
 
 .mb30{margin-bottom: 30px !important;}
+.mt30{margin-top: 30px !important;}
 
 .p{padding: 20px !important;}
 .pt{padding-top: 20px !important;}
