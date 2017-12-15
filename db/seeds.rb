@@ -246,8 +246,7 @@ rides = [
     passengers_allowed: 4,
     start_point: start_point_1,
     end_point: end_point_5,
-    description: "On se rejoint 5 min après l'arrivée du train,
-    voila mon portable : 0612345678  ",
+    description: "Rdv devant chez Paul, j'en profiterai pour prendre un Sandwich ! ",
     car_model: "Peugeot 406",
     price_cents: 300
    },
