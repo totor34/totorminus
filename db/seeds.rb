@@ -244,7 +244,7 @@ rides = [
     train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
     user: user_6, #killian
     passengers_allowed: 4,
-    start_point: start_point_2,
+    start_point: start_point_1,
     end_point: end_point_4,
     description: "On se rejoint 5 min après l'arrivée du train,
     voila mon portable : 0612345678  ",

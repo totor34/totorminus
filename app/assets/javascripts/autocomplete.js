@@ -59,8 +59,8 @@ var stations = new Bloodhound({
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   remote: {
     url: '/autocomplete-station?search%5Bstart_point=%QUERY',
-    wildcard: '%QUERY'
-  }
+    wildcard: '%QUERY',
+  },
 });
 
 $('#search-stations').typeahead({
@@ -68,6 +68,7 @@ $('#search-stations').typeahead({
 },
 {
   name: 'no-bullet',
-  source: stations
+  source: stations,
+  limit: 4,
 })
 
