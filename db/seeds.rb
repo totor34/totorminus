@@ -152,8 +152,8 @@ end_point_2 = EndPoint.create!(
 
 end_point_4 = EndPoint.create!(
   address: "26 Rue Chante Pleure 13790 Éguilles",
-  long: 5.568500,
-  lat: 43.488161
+  long: 5.351924,
+  lat: 43.570214
   )
 
 end_point_6 = EndPoint.create!(
@@ -218,10 +218,10 @@ rides = [
   {
     train_ref: "6129",
     train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_5, #chloe
+    user: user_6, #killian
     passengers_allowed: 3,
     start_point: start_point_1,
-    end_point: end_point_5,
+    end_point: end_point_4,
     description: "Rdv devant chez Paul, j'en profiterai pour prendre un Sandwich !",
     car_model: "206",
     price_cents: 300
@@ -242,10 +242,10 @@ rides = [
     {
     train_ref: "6129",
     train_arrival_at: DateTime.new(2017, 12, 15, 20, 46),
-    user: user_6, #killian
+    user: user_5, #chloe
     passengers_allowed: 4,
-    start_point: start_point_2,
-    end_point: end_point_4,
+    start_point: start_point_1,
+    end_point: end_point_5,
     description: "On se rejoint 5 min après l'arrivée du train,
     voila mon portable : 0612345678  ",
     car_model: "Peugeot 406",
