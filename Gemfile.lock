@@ -147,7 +147,7 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
-    pg (1.0.0)
+    pg (0.21.0)
     pg_search (2.1.2)
       activerecord (>= 4.2)
       activesupport (>= 4.2)
@@ -279,7 +279,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   momentjs-rails (>= 2.9.0)
   money-rails
-  pg
+  pg (~> 0.18)
   pg_search
   pry-byebug
   pry-rails
